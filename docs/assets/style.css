@@ -18,6 +18,9 @@
 }
 :root[data-theme="dark"] .article thead th{background:var(--th-bg)}
 :root[data-theme="dark"] .article table{border-color:var(--line)}
+/* text selection: intentional tint, never a pale/white block */
+::selection{background:rgba(255,107,74,.28)}
+.codeblock ::selection,.codeblock pre::selection,.codeblock code::selection{background:rgba(45,212,191,.40);color:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; scroll-padding-top:88px}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);

@@ -2,9 +2,15 @@ const fs = require("fs");
 const path = require("path");
 const { marked } = require("marked");
 
+const crypto = require("crypto");
 const ROOT = path.resolve(__dirname, "..");
 const OUT = path.join(ROOT, "docs");
 const ASSET_SRC = path.join(__dirname, "assets");
+// content-hash version → busts browser cache whenever CSS/JS change
+const ASSET_VER = crypto.createHash("md5")
+  .update(fs.readFileSync(path.join(ASSET_SRC, "style.css")))
+  .update(fs.readFileSync(path.join(ASSET_SRC, "app.js")))
+  .digest("hex").slice(0, 8);
 
 marked.use({ gfm: true, breaks: false, mangle: false, headerIds: false });
 
@@ -87,7 +93,7 @@ const HEAD = (title, extra = "") => `<!doctype html><html lang="ko" data-theme="
 <title>${title}</title>
 <meta name="description" content="광고 실무자를 위한 harness 활용 교육 · Harness Ad Academy">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=${ASSET_VER}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
 ${extra}</head><body>`;
 
@@ -103,7 +109,7 @@ const HEADER = (rel = "") => `<header class="hdr"><div class="hdr-in">
 const FOOT = () => `<footer class="foot"><div class="wrap">
 <span>Harness Ad Academy · 광고 실무자를 위한 <code>harness</code> 활용 교육</span>
 <span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
-</div></footer><script src="assets/app.js"></script></body></html>`;
+</div></footer><script src="assets/app.js?v=${ASSET_VER}"></script></body></html>`;
 
 const courseSidebar = (curId, toc) => `
 <aside class="side" id="side">
