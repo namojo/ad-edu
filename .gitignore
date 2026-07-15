@@ -1,0 +1,11 @@
+# build tooling deps (site is reproducible via _site_build/build_site.js)
+_site_build/node_modules/
+_site_build/package-lock.json
+node_modules/
+# workspace / temp
+_workspace/
+_workspace_prev/
+.DS_Store
+*.log
+.gstack/
+_site_build/.gstack/

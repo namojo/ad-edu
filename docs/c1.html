@@ -1,0 +1,392 @@
+<!doctype html><html lang="ko" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C1 · 하네스 첫걸음 — Harness Ad Academy</title>
+<meta name="description" content="광고 실무자를 위한 revfactory/harness 활용 교육 · Harness Ad Academy">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>:root{--pat:#3B82F6}</style></head><body><header class="hdr"><div class="hdr-in">
+<a class="brand" href="index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고 실무 × AI 하네스</small></span></a>
+<nav class="nav">
+<a class="hideSm" href="index.html#courses">과정</a>
+<a class="hideSm" href="index.html#tracks">추천 트랙</a>
+<a class="hideSm" href="https://github.com/namojo/ad-edu" target="_blank" rel="noopener">GitHub</a>
+<button class="iconbtn" id="themeBtn" onclick="toggleTheme()" title="테마 전환" type="button">☾</button>
+</nav></div></header><div class="progwrap"><div class="progbar" id="progbar"></div></div><button class="iconbtn menutoggle" onclick="toggleMenu()" style="position:fixed;left:14px;bottom:16px;z-index:70;width:48px;height:48px;box-shadow:var(--shadow-lg)" type="button">☰</button><div class="scrim"></div><section class="coursebanner"><div class="wrap">
+        <span class="cid">C1</span>
+        <h1>하네스 첫걸음</h1>
+        <div class="metarow"><span class="chip pat">파이프라인(소개)</span><span class="chip">기초</span><span class="chip">120분</span><span class="chip">선수과정 없음</span></div>
+      </div></section><div class="layout" data-course="c1">
+<aside class="side" id="side">
+  <h5>전체 과정</h5>
+  <ul class="courselist">
+    <li><a class="cur" style="--cdot:undefined" href="c1.html"><span class="dot"></span>C1 · 하네스 첫걸음</a></li><li><a class="" style="--cdot:undefined" href="c2.html"><span class="dot"></span>C2 · 리서치·인사이트 하네스</a></li><li><a class="" style="--cdot:undefined" href="c3.html"><span class="dot"></span>C3 · 크리에이티브 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c4.html"><span class="dot"></span>C4 · 미디어·캠페인 플래닝 하네스</a></li><li><a class="" style="--cdot:undefined" href="c5.html"><span class="dot"></span>C5 · 콘텐츠·SNS 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c6.html"><span class="dot"></span>C6 · 업무 자동화로 생산성 향상</a></li>
+  </ul>
+  <h5>이 과정 목차</h5>
+  <nav class="toc">
+    <a class="" href="#0-이-과정-한눈에">0. 이 과정 한눈에</a><a class="" href="#1-왜-이-하네스인가">1. 왜 이 하네스인가</a><a class="" href="#2-개념-이해">2. 개념 이해</a><a class="lvl3" href="#하네스란-무엇인가-3층-구조">하네스란 무엇인가 — 3층 구조</a><a class="lvl3" href="#quot하네스-구성해줘quot-한-문장이-팀이-된다">&quot;하네스 구성해줘&quot; 한 문장이 팀이 된다</a><a class="lvl3" href="#6가지-협업-패턴-이름만-먼저">6가지 협업 패턴 — 이름만 먼저</a><a class="lvl3" href="#팀-모드-vs-서브에이전트-모드">팀 모드 vs 서브에이전트 모드</a><a class="lvl3" href="#좋은-요청문의-3요소-도메인역할산출물">좋은 요청문의 3요소 — 도메인·역할·산출물</a><a class="" href="#3-사용할-하네스">3. 사용할 하네스</a><a class="lvl3" href="#팀-구성표">팀 구성표</a><a class="lvl3" href="#트리거-프롬프트">트리거 프롬프트</a><a class="" href="#4-실습-단계별">4. 실습 — 단계별</a><a class="lvl3" href="#준비-실습-전-점검">준비 (실습 전 점검)</a><a class="lvl3" href="#복붙-프롬프트-그대로-붙여넣기">복붙 프롬프트 (그대로 붙여넣기)</a><a class="lvl3" href="#7단계-따라하기">7단계 따라하기</a><a class="" href="#5-완성형-사례-worked-example">5. 완성형 사례 (worked example)</a><a class="lvl3" href="#5-1-시장-요약-1페이지-제로톡-예시-데이터">5-1. 시장 요약 1페이지 — 제로톡 (예시 데이터)</a><a class="lvl3" href="#5-2-광고-헤드라인-5개-예시-데이터">5-2. 광고 헤드라인 5개 (예시 데이터)</a><a class="" href="#6-자주-하는-실수">6. 자주 하는 실수</a><a class="" href="#7-체크리스트-amp-자기평가">7. 체크리스트 &amp; 자기평가</a><a class="lvl3" href="#완주-체크리스트">완주 체크리스트</a><a class="lvl3" href="#자기평가-루브릭-요약-r-c1-70점-이상-통과">자기평가 루브릭 요약 (R-C1 · 70점 이상 통과)</a><a class="" href="#8-다음-과정">8. 다음 과정</a>
+  </nav>
+</aside><main class="article" data-course="c1"><blockquote>
+<p>&quot;한 문장으로 나만의 AI 팀을 만든다.&quot; 오늘 여러분은 팀장이 됩니다.</p>
+</blockquote>
+<p><img src="assets/img/course1-basics/01-cover-hero.png" alt="표지" loading="lazy"><span class="imgcap">표지</span></p>
+<h2 id="0-이-과정-한눈에">0. 이 과정 한눈에</h2>
+<ul>
+<li><strong>대상:</strong> 광고 실무자 전원 (기획/AE, 크리에이티브, 미디어, 콘텐츠) — 코딩 지식 0을 전제합니다.</li>
+<li><strong>소요 시간:</strong> 120분 (개념 → 시연 → 실습 → 리뷰)</li>
+<li><strong>선수 과정:</strong> 없음 (여기가 출발점입니다)</li>
+<li><strong>사용 하네스:</strong> <code>starter-harness</code> — 리서처와 카피라이터로 이루어진 첫 미니 팀</li>
+<li><strong>얻어가는 것(산출물):</strong><ul>
+<li>&quot;제로톡&quot; 신제품 음료의 <strong>시장 요약 1페이지</strong></li>
+<li><strong>광고 헤드라인 5개</strong></li>
+<li>앞으로 계속 재사용할 <strong>나의 첫 AI 팀</strong>과 <strong>좋은 요청문 3요소</strong> 감각</li>
+</ul>
+</li>
+</ul>
+<p>이 과정의 목표는 코드를 배우는 게 아닙니다. 여러분은 <strong>팀장 역할</strong>만 합니다. 일을 나눠 맡기고, 결과를 검수하고, 마음에 안 들면 다시 요청하는 것 — 이미 매일 하고 계신 일입니다.</p>
+<hr>
+<h2 id="1-왜-이-하네스인가">1. 왜 이 하네스인가</h2>
+<p><strong>Before — 혼자 다 하던 방식.</strong> 신제품 캠페인 브리프가 떨어졌습니다. 시장을 검색하고, 경쟁사를 뒤지고, 정리하고, 그제야 헤드라인을 고민합니다. 반나절이 지나갑니다. 조사가 얕으면 카피도 흔들립니다.</p>
+<p><strong>After — 팀에게 맡기는 방식.</strong> &quot;조사하는 사람 하나, 카피 쓰는 사람 하나가 필요해&quot;라고 <strong>한 문장</strong>으로 부탁하면, AI가 그 두 역할을 가진 작은 팀을 만들어 줍니다. 조사한 사람의 결과를 카피라이터가 곧바로 이어받아 헤드라인을 뽑습니다. 여러분은 결과를 받아 검수하고, &quot;더 위트있게&quot;처럼 방향만 조정합니다.</p>
+<p><img src="assets/img/course1-basics/03-before-after.png" alt="혼자 vs 팀" loading="lazy"><span class="imgcap">혼자 vs 팀</span></p>
+<p>혼자서 순서대로 하던 일을, <strong>역할을 나눈 팀이 이어달리기</strong>로 처리합니다. 이 이어달리기 방식이 오늘 배우는 첫 번째 협업 패턴, <strong>파이프라인</strong>입니다.</p>
+<hr>
+<h2 id="2-개념-이해">2. 개념 이해</h2>
+<h3 id="하네스란-무엇인가-3층-구조">하네스란 무엇인가 — 3층 구조</h3>
+<p>하네스는 &quot;하네스 구성해줘&quot;라는 한 문장으로, 여러분의 업무 설명을 <strong>AI 팀</strong>으로 바꿔 주는 도구입니다. 그 팀은 세 개의 층으로 되어 있습니다. 광고 대행사 조직을 그대로 떠올리면 됩니다.</p>
+<p><img src="assets/img/course1-basics/02-team-metaphor.png" alt="팀 비유" loading="lazy"><span class="imgcap">팀 비유</span></p>
+<table>
+<thead>
+<tr>
+<th>층</th>
+<th>이 교재에서 부르는 이름</th>
+<th>광고팀 비유</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>오케스트레이터</td>
+<td><strong>팀장</strong></td>
+<td>팀장</td>
+<td>누가 언제 무슨 일을 할지 지휘하고, 결과를 모읍니다</td>
+</tr>
+<tr>
+<td>에이전트</td>
+<td><strong>팀원</strong></td>
+<td>조사 담당·카피라이터</td>
+<td>각자 맡은 전문 업무를 실제로 수행합니다</td>
+</tr>
+<tr>
+<td>스킬</td>
+<td><strong>업무 매뉴얼</strong></td>
+<td>팀원 책상 위 업무 지침서</td>
+<td>팀원이 &quot;어떻게&quot; 일하는지 적힌 방법서입니다</td>
+</tr>
+</tbody></table>
+<p>핵심은 이 분리입니다. <strong>&quot;누가(팀원)&quot;</strong> 와 <strong>&quot;어떻게(업무 매뉴얼)&quot;</strong> 가 따로 존재합니다. 그래서 사람은 그대로 두고 방법만 바꾸거나, 방법은 그대로 두고 사람을 추가할 수 있습니다.</p>
+<h3 id="quot하네스-구성해줘quot-한-문장이-팀이-된다">&quot;하네스 구성해줘&quot; 한 문장이 팀이 된다</h3>
+<p>여러분이 업무를 말로 설명하면, 하네스가 그 설명을 분석해서 필요한 팀원을 뽑고, 각자에게 업무 매뉴얼을 붙여 줍니다. 코드를 짜는 게 아니라 <strong>말로 팀을 조직</strong>하는 것입니다.</p>
+<p><img src="assets/img/course1-basics/04-one-sentence.png" alt="한 문장이 팀이 된다" loading="lazy"><span class="imgcap">한 문장이 팀이 된다</span></p>
+<blockquote>
+<p><strong>AI는 매번 조금씩 다르게 답합니다(비결정성).</strong> 같은 문장을 넣어도 옆 사람과 결과가 다를 수 있습니다. 이건 고장이 아니라 정상입니다. 그래서 우리는 결과를 <strong>한 번은 의심하고</strong>, 마음에 안 들면 다시 요청하는 습관을 들입니다. 이 검증 습관이 오늘부터 6과정 내내 따라다니는 가장 중요한 태도입니다.</p>
+</blockquote>
+<h3 id="6가지-협업-패턴-이름만-먼저">6가지 협업 패턴 — 이름만 먼저</h3>
+<p>팀이 협업하는 방식은 상황에 따라 6가지가 있습니다. 오늘은 <strong>이름만</strong> 익히세요. 각 방식은 앞으로 한 과정씩 깊게 배웁니다.</p>
+<table>
+<thead>
+<tr>
+<th>패턴</th>
+<th>한 줄 뜻</th>
+<th>배우는 과정</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>파이프라인</strong></td>
+<td>앞사람 결과를 뒷사람이 이어받는 순차 협업 (조사→카피)</td>
+<td><strong>오늘 C1</strong>, C5</td>
+</tr>
+<tr>
+<td><strong>팬아웃/팬인</strong></td>
+<td>여러 명이 동시에 조사한 뒤 하나로 종합</td>
+<td>C2</td>
+</tr>
+<tr>
+<td><strong>생성-검증</strong></td>
+<td>만드는 사람과 검수하는 사람을 나눔</td>
+<td>C3</td>
+</tr>
+<tr>
+<td><strong>감독자</strong></td>
+<td>중앙의 지휘자가 일을 나눠 맡기고 취합</td>
+<td>C4</td>
+</tr>
+<tr>
+<td><strong>전문가 풀</strong></td>
+<td>그때그때 필요한 전문가만 골라 호출</td>
+<td>C6</td>
+</tr>
+<tr>
+<td><strong>계층적 위임</strong></td>
+<td>큰 일을 잘게 쪼개 아래로 위임</td>
+<td>C6</td>
+</tr>
+</tbody></table>
+<p>오늘 우리가 쓰는 건 가장 기본인 <strong>파이프라인</strong> 하나입니다. 조사한 사람의 결과를 카피라이터가 받아쓰는, 이어달리기 한 판입니다.</p>
+<h3 id="팀-모드-vs-서브에이전트-모드">팀 모드 vs 서브에이전트 모드</h3>
+<ul>
+<li><strong>에이전트 팀 모드(오늘 사용):</strong> 여러 팀원이 <strong>서로 협업</strong>합니다. 조사 담당이 낸 결과를 카피라이터가 받아 이어가는, 진짜 팀워크입니다.</li>
+<li><strong>서브에이전트 모드:</strong> 팀원 한 명에게 <strong>단발성</strong>으로 일을 시키는 방식입니다. 협업이 없습니다.</li>
+</ul>
+<p>우리는 팀워크를 체험하려는 것이므로 <strong>팀 모드</strong>를 켜고 시작합니다. 만약 팀이 아니라 한 번에 답 하나만 나온다면 팀 기능이 꺼진 것이니, 4장 준비 단계를 확인하세요.</p>
+<h3 id="좋은-요청문의-3요소-도메인역할산출물">좋은 요청문의 3요소 — 도메인·역할·산출물</h3>
+<p>하네스에게 일을 부탁할 때 세 가지만 챙기면 팀이 헤매지 않습니다.</p>
+<table>
+<thead>
+<tr>
+<th>요소</th>
+<th>질문</th>
+<th>&quot;제로톡&quot; 예</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>도메인</strong></td>
+<td>무슨 일인가?</td>
+<td>신제품 음료 런칭을 돕는 일</td>
+</tr>
+<tr>
+<td><strong>역할</strong></td>
+<td>누가 필요한가?</td>
+<td>시장을 조사하는 리서처 + 헤드라인을 뽑는 카피라이터</td>
+</tr>
+<tr>
+<td><strong>산출물</strong></td>
+<td>무엇을 몇 개/몇 장 받나?</td>
+<td>조사 요약 1페이지 + 헤드라인 5개</td>
+</tr>
+</tbody></table>
+<p>이 3요소는 오늘뿐 아니라 앞으로 모든 요청문의 기본 뼈대입니다.</p>
+<hr>
+<h2 id="3-사용할-하네스">3. 사용할 하네스</h2>
+<p>오늘 사용할 팀장(오케스트레이터)은 <strong><code>starter-harness</code></strong> 입니다. 첫 하네스 실습을 위한 가장 단순한 파이프라인 팀장으로, 아래 두 팀원을 순서대로 엮습니다.</p>
+<h3 id="팀-구성표">팀 구성표</h3>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>팀원(역할)</th>
+<th>광고팀 비유</th>
+<th>하는 일</th>
+<th>넘겨주는 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>리서처</strong></td>
+<td>조사 담당</td>
+<td>시장·경쟁 상황을 빠르게 조사</td>
+<td>시장 요약 1페이지</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>카피라이터</strong></td>
+<td>카피라이터</td>
+<td>리서처의 요약을 받아 헤드라인 집필</td>
+<td>광고 헤드라인 5개</td>
+</tr>
+</tbody></table>
+<p>리서처 → 카피라이터. 앞사람의 결과가 뒷사람의 입력이 되는 전형적인 <strong>파이프라인</strong>입니다. 팀장(<code>starter-harness</code>)은 이 순서를 관리하고 두 결과를 하나로 묶어 여러분에게 전달합니다.</p>
+<h3 id="트리거-프롬프트">트리거 프롬프트</h3>
+<p>아래 문장이 이 팀을 깨우는 <strong>트리거</strong>입니다. 이 한 문장 안에 3요소(도메인·역할·산출물)가 모두 들어 있는지 눈으로 확인해 보세요.</p>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
+</code></pre></div>
+<hr>
+<h2 id="4-실습-단계별">4. 실습 — 단계별</h2>
+<p>이제 직접 &quot;제로톡&quot; 미니 팀을 돌려봅니다. <strong>제로톡</strong>은 이 아카데미가 6과정 내내 사용하는 가상 브랜드(제로 슈거 스파클링 음료)입니다. 실제 회사 자료 대신 이 가상 브랜드로 안전하게 연습합니다.</p>
+<h3 id="준비-실습-전-점검">준비 (실습 전 점검)</h3>
+<ul>
+<li>Claude Code가 실행되어 있고, 플러그인 목록에 <strong>harness</strong>가 보이나요?</li>
+<li><strong>에이전트 팀 기능</strong>이 켜져 있나요? (팀이 아니라 답 하나만 나오면 꺼진 것입니다 — 6장 참고)</li>
+<li>실습용 작업 폴더(예: <code>harness-lab</code>)가 하나 준비됐나요?</li>
+</ul>
+<h3 id="복붙-프롬프트-그대로-붙여넣기">복붙 프롬프트 (그대로 붙여넣기)</h3>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
+</code></pre></div>
+<p>톤을 바꿔 다시 뽑는 <strong>재요청</strong>(7단계)에는 이 문장을 이어서 넣습니다.</p>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>헤드라인을 더 위트있게, 20대가 SNS에서 공유하고 싶어할 톤으로 5개 다시 뽑아줘.
+</code></pre></div>
+<h3 id="7단계-따라하기">7단계 따라하기</h3>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>할 일</th>
+<th>기대 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Claude Code 실행 → 플러그인 목록에서 harness 확인</td>
+<td>harness가 설치 목록에 보임</td>
+</tr>
+<tr>
+<td>2</td>
+<td>에이전트 팀 기능이 켜져 있는지 확인</td>
+<td>팀 기능 on (단일 응답이 아니라 팀 구성됨)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>위 복붙 프롬프트 입력</td>
+<td>하네스가 도메인을 분석해 <strong>리서처 + 카피라이터 2인 팀</strong>을 제안</td>
+</tr>
+<tr>
+<td>4</td>
+<td>하네스가 만든 팀원 파일과 업무 매뉴얼 파일을 눈으로 확인</td>
+<td>&quot;누가(팀원)&quot;와 &quot;어떻게(업무 매뉴얼)&quot;가 파일로 분리돼 있음을 목격</td>
+</tr>
+<tr>
+<td>5</td>
+<td>팀 실행 결과 수령</td>
+<td><strong>시장 요약 1페이지 + 헤드라인 5개</strong> 확보</td>
+</tr>
+<tr>
+<td>6</td>
+<td>이 흐름을 라벨링</td>
+<td>&quot;조사→카피 = <strong>파이프라인</strong>&quot;이라고 이름 붙이기</td>
+</tr>
+<tr>
+<td>7</td>
+<td>&quot;더 위트있게&quot; 재요청</td>
+<td>같은 팀이 <strong>톤만 바꿔 재생성</strong> → &quot;쓸수록 진화한다&quot; 체감</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>결과가 옆 사람과 달라도 괜찮습니다(비결정성). 그리고 첫 결과를 그냥 믿지 마세요. 5개 헤드라인을 소리 내어 읽어 보고, 어색하면 7단계처럼 다시 요청하는 것 — 이게 검증입니다.</p>
+</blockquote>
+<p>실습이 지연되면 강사가 준비한 폴백(사전 생성 결과)으로 개념을 이어갑니다. 완성된 결과가 어떤 모습인지는 바로 다음 5장에서 미리 볼 수 있습니다.</p>
+<hr>
+<h2 id="5-완성형-사례-worked-example">5. 완성형 사례 (worked example)</h2>
+<p>아래는 위 하네스를 돌렸을 때 <strong>나올 법한</strong> 산출물 예시입니다. 브랜드와 수치는 모두 <strong>가상 데이터(예시)</strong> 입니다. 실제 조사 결과가 아니라, &quot;완성되면 이런 모양이구나&quot;를 보여주는 견본으로 읽어 주세요.</p>
+<h3 id="5-1-시장-요약-1페이지-제로톡-예시-데이터">5-1. 시장 요약 1페이지 — 제로톡 (예시 데이터)</h3>
+<p><strong>대상 브랜드:</strong> 제로톡 (ZeroTalk) — 제로 슈거 스파클링 음료 · 여름 신제품 런칭
+<strong>작성:</strong> 리서처 팀원 · <strong>분량:</strong> 1페이지 요약</p>
+<p><strong>① 카테고리 상황 (예시 데이터)</strong></p>
+<ul>
+<li>국내 제로 슈거 탄산·스파클링 음료 시장은 최근 3년간 연 15% 안팎으로 성장 중인 것으로 보이며, 저당·헬시플레저 트렌드가 성장을 견인.</li>
+<li>구매의 핵심 동인은 &quot;죄책감 없는 즐거움&quot; — 맛은 지키되 당·칼로리 부담은 덜고 싶은 심리.</li>
+<li>주 소비층은 20~30대, 특히 자기관리와 SNS 공유에 민감한 라이트 헬스족.</li>
+</ul>
+<p><strong>② 소비자 페인포인트 (예시 데이터)</strong></p>
+<ul>
+<li>&quot;제로는 맛이 밍밍하다&quot;는 인식이 여전히 잔존 — 맛 만족도가 재구매의 최대 관문.</li>
+<li>인공감미료 뒷맛에 대한 거부감이 일부 존재.</li>
+<li>제품이 너무 많아 무엇이 진짜 &quot;맛있는 제로&quot;인지 고르기 피로.</li>
+</ul>
+<p><strong>③ 경쟁 포지셔닝 (예시 데이터)</strong></p>
+<ul>
+<li>기존 대형 브랜드: &quot;익숙함·안전함&quot;으로 넓게 커버하나 젊은 층에는 다소 올드한 인상.</li>
+<li>신생 스파클링 브랜드: &quot;세련된 디자인·이색 플레이버&quot;로 SNS에서 화제이나 대중 인지도는 낮음.</li>
+<li><strong>제로톡의 빈틈:</strong> &quot;제대로 맛있는 제로&quot; + &quot;SNS에서 말 걸고 싶어지는 위트&quot; 조합은 아직 비어 있음.</li>
+</ul>
+<p><strong>④ 캠페인 방향 시사점 (예시 데이터)</strong></p>
+<ul>
+<li>핵심 메시지 축: <strong>맛(밍밍함 반전) × 위트(공유하고 싶은 말투)</strong>.</li>
+<li>톤앤매너: 젊고 가볍고, 자기관리를 설교하지 않는 친구 같은 목소리.</li>
+<li>1차 타겟: 20대 후반, &quot;건강도 챙기지만 재미가 우선&quot;인 SNS 액티브 소비자.</li>
+</ul>
+<h3 id="5-2-광고-헤드라인-5개-예시-데이터">5-2. 광고 헤드라인 5개 (예시 데이터)</h3>
+<p>카피라이터 팀원이 위 요약의 &quot;맛 × 위트&quot; 방향을 받아 집필한 견본입니다.</p>
+<ol>
+<li><strong>제로인데, 왜 이렇게 할 말이 많아?</strong></li>
+<li><strong>밍밍함은 옛날 제로 얘기.</strong> 제로톡은 톡 쏘고 할 말도 쏜다.</li>
+<li><strong>오늘의 죄책감: 0. 오늘의 수다: 무제한.</strong></li>
+<li><strong>다이어트는 내일부터, 제로톡은 지금부터.</strong></li>
+<li><strong>당은 뺐는데 재미는 못 뺐다.</strong></li>
+</ol>
+<blockquote>
+<p>위 헤드라인은 견본입니다. 실제 실습에서는 여러분의 팀이 조금 다른 5개를 낼 것입니다(비결정성). 나온 카피를 그대로 쓰기 전에, 브랜드 톤에 맞는지 한 번 검수하고 필요하면 재요청하세요.</p>
+</blockquote>
+<hr>
+<h2 id="6-자주-하는-실수">6. 자주 하는 실수</h2>
+<table>
+<thead>
+<tr>
+<th>실수</th>
+<th>이렇게 하세요</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>산출물을 안 적어서</strong> 팀이 무엇을 만들지 모호해짐</td>
+<td>요청문에 항상 3요소(도메인·역할·산출물)를 넣으세요. &quot;1페이지&quot;, &quot;5개&quot;처럼 <strong>형식·개수</strong>를 명시합니다.</td>
+</tr>
+<tr>
+<td><strong>팀 기능이 꺼져</strong> 팀 대신 답 하나만 나옴</td>
+<td>에이전트 팀 기능이 켜졌는지 확인하세요. 협업이 목적이면 반드시 팀 모드로 시작합니다.</td>
+</tr>
+<tr>
+<td><strong>트리거 문장이 부정확</strong>해 하네스가 안 깨어남</td>
+<td>&quot;하네스 구성해줘&quot;라는 표현을 정확히 사용하고, harness 플러그인이 설치·활성화됐는지 확인합니다.</td>
+</tr>
+<tr>
+<td><strong>첫 결과를 그냥 믿고</strong> 검증을 건너뜀</td>
+<td>결과를 한 번은 의심하세요. 어색하면 톤·타겟을 덧붙여 재요청하는 것이 정상 절차입니다.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-체크리스트-amp-자기평가">7. 체크리스트 &amp; 자기평가</h2>
+<h3 id="완주-체크리스트">완주 체크리스트</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox"><label>하네스의 3층 구조(팀장·팀원·업무 매뉴얼)를 내 말로 설명할 수 있다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>&quot;하네스 구성해줘&quot; 한 문장으로 리서처+카피라이터 팀을 만들었다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>&quot;누가(팀원)&quot;와 &quot;어떻게(업무 매뉴얼)&quot;가 파일로 분리됨을 확인했다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>시장 요약 1페이지 + 헤드라인 5개를 받았다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>이 흐름이 &quot;파이프라인(조사→카피)&quot;임을 라벨링했다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>&quot;더 위트있게&quot; 재요청으로 톤을 바꿔 재생성했다(진화 체험)</label></li>
+<li class="task-list-item"><input type="checkbox"><label>요청문에 3요소(도메인·역할·산출물)를 모두 넣었다</label></li>
+</ul>
+<h3 id="자기평가-루브릭-요약-r-c1-70점-이상-통과">자기평가 루브릭 요약 (R-C1 · 70점 이상 통과)</h3>
+<table>
+<thead>
+<tr>
+<th>평가 항목</th>
+<th>배점</th>
+<th>우수 기준</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>개념 이해</strong></td>
+<td>30</td>
+<td>팀장·팀원·업무 매뉴얼 3층 구조를 광고팀 비유로 스스로 설명</td>
+</tr>
+<tr>
+<td><strong>설치·실행</strong></td>
+<td>30</td>
+<td>도움 없이 설치·팀 활성화·첫 하네스 실행을 완료</td>
+</tr>
+<tr>
+<td><strong>요청문 품질</strong></td>
+<td>25</td>
+<td>도메인·역할·산출물 3요소를 모두 명시</td>
+</tr>
+<tr>
+<td><strong>검증 태도</strong></td>
+<td>15</td>
+<td>결과를 무비판 수용하지 않고 재요청으로 개선</td>
+</tr>
+</tbody></table>
+<p>각 항목은 미흡/보통/우수 3단계로 스스로 점검하고, 합산 70점 이상이면 다음 과정으로 넘어갈 준비가 된 것입니다.</p>
+<hr>
+<h2 id="8-다음-과정">8. 다음 과정</h2>
+<p>오늘 여러분은 <strong>파이프라인</strong> 팀 하나로 첫걸음을 뗐습니다. 다음은 여러 명이 <strong>동시에</strong> 조사하는 팀입니다.</p>
+<p><strong>C2 — 리서치·인사이트 하네스 (팬아웃/팬인)</strong></p>
+<blockquote>
+<p>&quot;하루 걸리던 카테고리 진단을 한 시간에.&quot; 시장·소비자·경쟁·트렌드를 네 명이 동시에 조사하고(팬아웃), 한 명이 교차검증해 하나의 인사이트 보고서로 종합합니다(팬인).</p>
+</blockquote>
+<p><strong>과제:</strong> 오늘 만든 &quot;제로톡&quot; 팀을, 여러분이 실제 담당하는 브랜드로 바꿔 한 번 더 돌려 보세요. 3요소만 바꾸면 됩니다.</p>
+
+<div class="pager">
+    <a class="prev" href="index.html"><div class="dir">← 홈</div><div class="ttl">과정 목록</div></a>
+    <a class="next" href="c2.html"><div class="dir">다음 과정 →</div><div class="ttl">C2 · 리서치·인사이트 하네스</div></a>
+  </div></main></div><script>document.body.setAttribute('data-course','c1')</script><footer class="foot"><div class="wrap">
+<span>Harness Ad Academy · 광고 실무자를 위한 <code>revfactory/harness</code> 활용 교육</span>
+<span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
+</div></footer><script src="assets/app.js"></script></body></html>

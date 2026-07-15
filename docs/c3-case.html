@@ -1,0 +1,207 @@
+<!doctype html><html lang="ko" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C3 사례 — Harness Ad Academy</title>
+<meta name="description" content="광고 실무자를 위한 revfactory/harness 활용 교육 · Harness Ad Academy">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>:root{--pat:#FF6B4A}</style></head><body><header class="hdr"><div class="hdr-in">
+<a class="brand" href="index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고 실무 × AI 하네스</small></span></a>
+<nav class="nav">
+<a class="hideSm" href="index.html#courses">과정</a>
+<a class="hideSm" href="index.html#tracks">추천 트랙</a>
+<a class="hideSm" href="https://github.com/namojo/ad-edu" target="_blank" rel="noopener">GitHub</a>
+<button class="iconbtn" id="themeBtn" onclick="toggleTheme()" title="테마 전환" type="button">☾</button>
+</nav></div></header><div class="progwrap"><div class="progbar" id="progbar"></div></div><button class="iconbtn menutoggle" onclick="toggleMenu()" style="position:fixed;left:14px;bottom:16px;z-index:70;width:48px;height:48px;box-shadow:var(--shadow-lg)" type="button">☰</button><div class="scrim"></div><section class="coursebanner"><div class="wrap">
+        <span class="cid">C3 · 사례</span>
+        <h1>완성형 사례 — 크리에이티브 제작 하네스</h1>
+        <div class="metarow"><span class="chip pat">worked example</span><span class="chip">가상 브랜드 · 예시 데이터</span>
+        <a class="chip" href="c3.html">← 교재로 돌아가기</a></div>
+      </div></section><div class="layout">
+<aside class="side" id="side">
+  <h5>전체 과정</h5>
+  <ul class="courselist">
+    <li><a class="" style="--cdot:undefined" href="c1.html"><span class="dot"></span>C1 · 하네스 첫걸음</a></li><li><a class="" style="--cdot:undefined" href="c2.html"><span class="dot"></span>C2 · 리서치·인사이트 하네스</a></li><li><a class="cur" style="--cdot:undefined" href="c3.html"><span class="dot"></span>C3 · 크리에이티브 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c4.html"><span class="dot"></span>C4 · 미디어·캠페인 플래닝 하네스</a></li><li><a class="" style="--cdot:undefined" href="c5.html"><span class="dot"></span>C5 · 콘텐츠·SNS 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c6.html"><span class="dot"></span>C6 · 업무 자동화로 생산성 향상</a></li>
+  </ul>
+  <h5>이 과정 목차</h5>
+  <nav class="toc">
+    <a class="" href="#1-카피-ab-추천-카피-3세트">1. 카피 A/B — 추천 카피 3세트</a><a class="lvl3" href="#세트-a-감성-앵글-quot죄책감-없는-시원함quot">세트 A · 감성 앵글 — &quot;죄책감 없는 시원함&quot;</a><a class="lvl3" href="#세트-b-기능-앵글-quot숫자로-증명하는-청량함quot">세트 B · 기능 앵글 — &quot;숫자로 증명하는 청량함&quot;</a><a class="lvl3" href="#세트-c-유머-앵글-quot솔직한-여름의-위트quot">세트 C · 유머 앵글 — &quot;솔직한 여름의 위트&quot;</a><a class="" href="#2-키비주얼-컨셉-4안">2. 키비주얼 컨셉 4안</a><a class="lvl3" href="#1안-청량-여름해변">1안 · 청량 / 여름해변</a><a class="lvl3" href="#2안-미니멀-제품샷">2안 · 미니멀 제품샷</a><a class="lvl3" href="#3안-활기찬-라이프스타일">3안 · 활기찬 라이프스타일</a><a class="lvl3" href="#4안-대담한-그래픽">4안 · 대담한 그래픽</a><a class="" href="#3-아트디렉터-검수-코멘트-생성-검증-루프">3. 아트디렉터 검수 코멘트 (생성-검증 루프)</a><a class="lvl3" href="#회차-1-초안-검수">회차 1 — 초안 검수</a><a class="lvl3" href="#회차-2-재검수">회차 2 — 재검수</a><a class="" href="#4-무드보드-요약">4. 무드보드 요약</a>
+  </nav>
+</aside><main class="article"><h1>완성형 사례 · &quot;제로톡&quot; 여름 캠페인 크리에이티브 패키지</h1>
+<blockquote>
+<p><strong>가상 브랜드·예시 데이터입니다.</strong> 실제로 <code>creative-harness</code>(생성-검증)를 돌렸을 때 나올 법한 산출물을 그대로 재현했습니다.
+구성: 카피 A/B(감성·기능·유머 3앵글) → 키비주얼 컨셉 4안 → 아트디렉터 검수(반려·재생성 루프) → 무드보드 요약.</p>
+</blockquote>
+<ul>
+<li><strong>브랜드:</strong> 제로톡 (제로 슈거 스파클링 음료) <em>(예시)</em></li>
+<li><strong>캠페인:</strong> 여름 시즌 런칭, 20~30대 타깃</li>
+<li><strong>핵심 메시지:</strong> 설탕 0g인데 청량함은 진짜 — 죄책감 없이 시원하게</li>
+<li><strong>브랜드 톤앤매너:</strong> 젊고 위트있게, 상쾌하고 솔직하게 / 금지: 과장·의학적 효능 주장, 다이어트 압박 조장</li>
+</ul>
+<hr>
+<h2 id="1-카피-ab-추천-카피-3세트">1. 카피 A/B — 추천 카피 3세트</h2>
+<h3 id="세트-a-감성-앵글-quot죄책감-없는-시원함quot">세트 A · 감성 앵글 — &quot;죄책감 없는 시원함&quot;</h3>
+<ul>
+<li><strong>헤드라인:</strong> 이 여름, 죄책감은 두고 시원함만 챙기세요</li>
+<li><strong>바디:</strong> 무더위에 손이 가는 건 늘 달고 시원한 것. 그런데 마시고 나면 남는 건 후회뿐이었죠. 제로톡은 설탕 0g, 그래서 마시는 순간에도 마신 다음에도 개운합니다. 여름의 시원함, 이번엔 그냥 즐기세요.</li>
+<li><strong>CTA:</strong> 지금, 죄책감 없이 한 캔.</li>
+</ul>
+<h3 id="세트-b-기능-앵글-quot숫자로-증명하는-청량함quot">세트 B · 기능 앵글 — &quot;숫자로 증명하는 청량함&quot;</h3>
+<ul>
+<li><strong>헤드라인:</strong> 설탕 0g. 칼로리 0. 청량함은 100%.</li>
+<li><strong>바디:</strong> 빼야 할 건 다 뺐습니다. 설탕도, 칼로리도 0. 대신 톡 쏘는 탄산과 진짜 상쾌함은 그대로 담았어요. 참느라 밍밍한 물만 마시던 여름은 이제 그만. 제로는 맛없다는 편견, 제로톡 한 모금이면 끝납니다.</li>
+<li><strong>CTA:</strong> 제로의 기준을 다시 마셔보세요.</li>
+</ul>
+<h3 id="세트-c-유머-앵글-quot솔직한-여름의-위트quot">세트 C · 유머 앵글 — &quot;솔직한 여름의 위트&quot;</h3>
+<ul>
+<li><strong>헤드라인:</strong> &quot;물만 마셔요&quot;… 라고 말하며 몰래 여는 캔</li>
+<li><strong>바디:</strong> 다들 그런 척은 하잖아요. 건강한 척, 참는 척. 근데 이건 참는 게 아니라 그냥 맛있게 마시는 거예요. 설탕 0g이니까 척할 필요도 없고요. 톡— 소리부터 이미 정직합니다.</li>
+<li><strong>CTA:</strong> 척하지 말고, 톡.</li>
+</ul>
+<blockquote>
+<p><strong>참고 — A/B 변형 운용:</strong> 위 3세트는 각 앵글의 추천안입니다. 실전에서는 헤드라인만 2~3개씩 변형(A/B)해 매체별로 테스트합니다. 예: 기능 앵글 헤드라인 대안 &quot;제로인데 밍밍하지 않다는 게 함정&quot; / &quot;0을 빼니 100이 남았다&quot;.</p>
+</blockquote>
+<hr>
+<h2 id="2-키비주얼-컨셉-4안">2. 키비주얼 컨셉 4안</h2>
+<p>실제 이미지는 별도 생성 예정이며(파일: <code>../images/c3-keyvisual-01.png</code> ~ <code>04.png</code>), 생성 명세는 <code>images/_prompts.md</code>에 있습니다. 4안 모두 <strong>통일 팔레트</strong>(네이비 #1E293B · 코럴 #FF6B4A · 티일 #2DD4BF · 오프화이트 #F8FAFC)와 <strong>이미지 내 텍스트 배제</strong> 원칙을 따릅니다.</p>
+<h3 id="1안-청량-여름해변">1안 · 청량 / 여름해변</h3>
+<ul>
+<li><strong>컨셉:</strong> 시원함을 몸으로 느끼게 하는 감성 컷. 캔 주위로 물방울이 튀는 순간 포착.</li>
+<li><strong>무드:</strong> 상쾌, 개방감, 여름 한낮</li>
+<li><strong>색:</strong> 코발트·티일 바다색 + 코럴 포인트(파라솔/노을 힌트)</li>
+<li><strong>구도:</strong> 로우앵글, 캔이 화면 하단 1/3, 뒤로 바다·하늘 여백. 16:9</li>
+<li><strong>어울리는 앵글:</strong> 감성(세트 A)</li>
+</ul>
+<h3 id="2안-미니멀-제품샷">2안 · 미니멀 제품샷</h3>
+<ul>
+<li><strong>컨셉:</strong> &quot;설탕 0&quot;의 깔끔함·정직함을 절제로 표현. 제품이 주인공.</li>
+<li><strong>무드:</strong> 미니멀, 정제, 프리미엄</li>
+<li><strong>색:</strong> 오프화이트 배경 + 티일 하이라이트, 네이비 그림자</li>
+<li><strong>구도:</strong> 센터 정렬 캔 하나, 부드러운 단일 광원, 넉넉한 여백. 16:9</li>
+<li><strong>어울리는 앵글:</strong> 기능(세트 B)</li>
+</ul>
+<h3 id="3안-활기찬-라이프스타일">3안 · 활기찬 라이프스타일</h3>
+<ul>
+<li><strong>컨셉:</strong> 공유하고 싶은 여름 순간. 사람들의 손에 든 캔, 웃음.</li>
+<li><strong>무드:</strong> 활기, 소셜, 즐거움</li>
+<li><strong>색:</strong> 따뜻한 오후 톤 + 코럴 의상 포인트, 티일 소품</li>
+<li><strong>구도:</strong> 옥상 파티 미드샷, 여러 손이 캔으로 모이는 동작. 16:9</li>
+<li><strong>어울리는 앵글:</strong> 유머(세트 C) / 소셜 확산</li>
+</ul>
+<h3 id="4안-대담한-그래픽">4안 · 대담한 그래픽</h3>
+<ul>
+<li><strong>컨셉:</strong> SNS 썸네일에서 눈에 꽂히는 컷. 큰 색면 + 탄산 버블 패턴.</li>
+<li><strong>무드:</strong> 볼드, 그래픽, 팝</li>
+<li><strong>색:</strong> 네이비·코럴·티일 대형 색면 대비, 오프화이트 여백</li>
+<li><strong>구도:</strong> 플랫 그래픽 배경 위 캔 실루엣, 대각선 버블 흐름. 16:9</li>
+<li><strong>어울리는 앵글:</strong> 기능·유머 공용, 퍼포먼스 광고</li>
+</ul>
+<hr>
+<h2 id="3-아트디렉터-검수-코멘트-생성-검증-루프">3. 아트디렉터 검수 코멘트 (생성-검증 루프)</h2>
+<p>아트디렉터는 <strong>만든 사람과 다른 자리에서</strong> 브랜드 톤앤매너만 기준으로 봅니다. 아래는 실제 검수 회차 기록입니다.</p>
+<h3 id="회차-1-초안-검수">회차 1 — 초안 검수</h3>
+<table>
+<thead>
+<tr>
+<th>대상</th>
+<th>판정</th>
+<th>사유</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>카피 세트 A(감성)</td>
+<td>✅ 통과</td>
+<td>톤 &quot;솔직·상쾌&quot; 부합. 과장·효능 주장 없음.</td>
+</tr>
+<tr>
+<td>카피 세트 B(기능)</td>
+<td>✅ 통과</td>
+<td>숫자 근거 명확, &quot;밍밍한 물만&quot; 표현이 위트 살림.</td>
+</tr>
+<tr>
+<td>카피 세트 C(유머) 초안</td>
+<td>⛔ <strong>반려</strong></td>
+<td>초안 헤드라인 &quot;다이어트 중이라 참는 당신께&quot;가 <strong>다이어트 압박</strong>으로 읽힘 → 브랜드 금지 기준 위반.</td>
+</tr>
+<tr>
+<td>키비주얼 1·3·4안</td>
+<td>✅ 통과</td>
+<td>팔레트 통일, 텍스트 없음, 컨셉 다양성 확보.</td>
+</tr>
+<tr>
+<td>키비주얼 2안</td>
+<td>🔁 <strong>조건부</strong></td>
+<td>컨셉 좋으나 그림자가 무거워 &quot;미니멀·정직&quot; 무드 저해 → 그림자 톤 다운 재생성 지시.</td>
+</tr>
+</tbody></table>
+<p><strong>재생성 지시(아트디렉터 → 카피라이터):</strong></p>
+<blockquote>
+<p>&quot;유머 앵글은 &#39;참아라/빼라&#39;는 압박 없이, 웃으며 공감하는 방향으로. 몰래 즐기는 위트로 다시. 통과한 감성·기능은 손대지 마세요.&quot;</p>
+</blockquote>
+<p><strong>재생성 지시(아트디렉터 → 비주얼 디자이너):</strong></p>
+<blockquote>
+<p>&quot;2안 유지하되 그림자 명도만 낮춰 가볍게. 배경 오프화이트 여백 더 확보.&quot;</p>
+</blockquote>
+<h3 id="회차-2-재검수">회차 2 — 재검수</h3>
+<table>
+<thead>
+<tr>
+<th>대상</th>
+<th>판정</th>
+<th>사유</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>카피 세트 C(유머) 수정안</td>
+<td>✅ 통과</td>
+<td>&quot;물만 마셔요…라고 말하며 몰래 여는 캔&quot; — 압박 제거, 공감·위트 확보.</td>
+</tr>
+<tr>
+<td>키비주얼 2안 재생성</td>
+<td>✅ 통과</td>
+<td>그림자 톤 다운, 미니멀 무드 회복.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>검수 결론:</strong> 카피 3세트·키비주얼 4안 전량 통과. 생성-검증 루프 1회 순환으로 브랜드 톤 리스크 1건(다이어트 압박)을 걸러냄. <strong>이 반려 1건이 이 하네스가 존재하는 이유입니다</strong> — 혼자 뽑았다면 그대로 나갔을 카피입니다.</p>
+</blockquote>
+<hr>
+<h2 id="4-무드보드-요약">4. 무드보드 요약</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>키워드</td>
+<td>청량 · 정직 · 위트 · 죄책감 없는 여름</td>
+</tr>
+<tr>
+<td>팔레트</td>
+<td>네이비 #1E293B / 코럴 #FF6B4A / 티일 #2DD4BF / 오프화이트 #F8FAFC</td>
+</tr>
+<tr>
+<td>톤앤매너</td>
+<td>젊고 위트있게, 솔직하게. 압박·과장 없음</td>
+</tr>
+<tr>
+<td>비주얼 방향</td>
+<td>시원한 물·탄산 질감 + 큰 색면 그래픽, 텍스트는 이미지 밖</td>
+</tr>
+<tr>
+<td>카피 방향</td>
+<td>3앵글 병행(감성 도달 + 기능 설득 + 유머 확산)</td>
+</tr>
+<tr>
+<td>매체 적용</td>
+<td>감성=브랜드 필름/옥외, 기능=상세페이지/검색, 유머=SNS/숏폼</td>
+</tr>
+</tbody></table>
+<hr>
+<p><em>본 패키지는 교육용 완성형 사례입니다. 수치·문구는 그럴듯하게 구성한 예시이며 실제 브랜드와 무관합니다.</em></p>
+<div class="pager"><a class="prev" href="c3.html"><div class="dir">← 교재</div><div class="ttl">크리에이티브 제작 하네스</div></a></div></main></div><footer class="foot"><div class="wrap">
+<span>Harness Ad Academy · 광고 실무자를 위한 <code>revfactory/harness</code> 활용 교육</span>
+<span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
+</div></footer><script src="assets/app.js"></script></body></html>

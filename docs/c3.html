@@ -1,0 +1,366 @@
+<!doctype html><html lang="ko" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C3 · 크리에이티브 제작 하네스 — Harness Ad Academy</title>
+<meta name="description" content="광고 실무자를 위한 revfactory/harness 활용 교육 · Harness Ad Academy">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>:root{--pat:#FF6B4A}</style></head><body><header class="hdr"><div class="hdr-in">
+<a class="brand" href="index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고 실무 × AI 하네스</small></span></a>
+<nav class="nav">
+<a class="hideSm" href="index.html#courses">과정</a>
+<a class="hideSm" href="index.html#tracks">추천 트랙</a>
+<a class="hideSm" href="https://github.com/namojo/ad-edu" target="_blank" rel="noopener">GitHub</a>
+<button class="iconbtn" id="themeBtn" onclick="toggleTheme()" title="테마 전환" type="button">☾</button>
+</nav></div></header><div class="progwrap"><div class="progbar" id="progbar"></div></div><button class="iconbtn menutoggle" onclick="toggleMenu()" style="position:fixed;left:14px;bottom:16px;z-index:70;width:48px;height:48px;box-shadow:var(--shadow-lg)" type="button">☰</button><div class="scrim"></div><section class="coursebanner"><div class="wrap">
+        <span class="cid">C3</span>
+        <h1>크리에이티브 제작 하네스</h1>
+        <div class="metarow"><span class="chip pat">생성-검증</span><span class="chip">중급</span><span class="chip">150분</span><span class="chip">선수 C1</span><a class="chip pat" href="c3-case.html">📄 완성형 사례 보기</a></div>
+      </div></section><div class="layout" data-course="c3">
+<aside class="side" id="side">
+  <h5>전체 과정</h5>
+  <ul class="courselist">
+    <li><a class="" style="--cdot:undefined" href="c1.html"><span class="dot"></span>C1 · 하네스 첫걸음</a></li><li><a class="" style="--cdot:undefined" href="c2.html"><span class="dot"></span>C2 · 리서치·인사이트 하네스</a></li><li><a class="cur" style="--cdot:undefined" href="c3.html"><span class="dot"></span>C3 · 크리에이티브 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c4.html"><span class="dot"></span>C4 · 미디어·캠페인 플래닝 하네스</a></li><li><a class="" style="--cdot:undefined" href="c5.html"><span class="dot"></span>C5 · 콘텐츠·SNS 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c6.html"><span class="dot"></span>C6 · 업무 자동화로 생산성 향상</a></li>
+  </ul>
+  <h5>이 과정 목차</h5>
+  <nav class="toc">
+    <a class="" href="#0-이-과정-한눈에">0. 이 과정 한눈에</a><a class="" href="#1-왜-이-하네스인가">1. 왜 이 하네스인가</a><a class="" href="#2-개념-이해-생성-검증">2. 개념 이해 — 생성-검증</a><a class="lvl3" href="#만드는-사람-검수하는-사람">만드는 사람 ≠ 검수하는 사람</a><a class="lvl3" href="#리뷰-게이트-통과-못하면-못-나간다">리뷰 게이트 — 통과 못하면 못 나간다</a><a class="lvl3" href="#codex-image-병렬-컨셉-생성">codex-image 병렬 컨셉 생성</a><a class="lvl3" href="#카피-ab-같은-메시지-다른-앵글">카피 A/B — 같은 메시지, 다른 앵글</a><a class="" href="#3-사용할-하네스-creative-harness">3. 사용할 하네스 — creative-harness</a><a class="lvl3" href="#팀-구성표">팀 구성표</a><a class="lvl3" href="#트리거-프롬프트-복붙">트리거 프롬프트 (복붙)</a><a class="" href="#4-실습-quot제로톡quot-여름-캠페인-크리에이티브">4. 실습 — &quot;제로톡&quot; 여름 캠페인 크리에이티브</a><a class="lvl3" href="#4-1-하네스-구성-복붙">4-1. 하네스 구성 (복붙)</a><a class="lvl3" href="#4-2-브리프브랜드-톤-입력-복붙">4-2. 브리프·브랜드 톤 입력 (복붙)</a><a class="lvl3" href="#4-3-단계-표">4-3. 단계 표</a><a class="lvl3" href="#4-4-재생성반려-시켜-보기-복붙">4-4. 재생성(반려) 시켜 보기 (복붙)</a><a class="" href="#5-완성형-사례-quot제로톡quot-여름-캠페인-크리에이티브-패키지">5. 완성형 사례 — &quot;제로톡&quot; 여름 캠페인 크리에이티브 패키지</a><a class="lvl3" href="#추천-카피-3세트-발췌">추천 카피 3세트 (발췌)</a><a class="lvl3" href="#키비주얼-컨셉-4안">키비주얼 컨셉 4안</a><a class="lvl3" href="#아트디렉터-검수-한-줄">아트디렉터 검수 한 줄</a><a class="" href="#6-자주-하는-실수">6. 자주 하는 실수</a><a class="" href="#7-체크리스트-amp-자기평가">7. 체크리스트 &amp; 자기평가</a><a class="" href="#8-다음-과정">8. 다음 과정</a>
+  </nav>
+</aside><main class="article" data-course="c3"><blockquote>
+<p>카피와 비주얼은 팀으로 뽑고, 아트디렉터가 검수한다 — 만드는 손과 보는 눈을 나누면 결과가 달라집니다.</p>
+</blockquote>
+<h2 id="0-이-과정-한눈에">0. 이 과정 한눈에</h2>
+<ul>
+<li><strong>대상:</strong> 크리에이티브(카피/아트), 기획 실무자</li>
+<li><strong>소요:</strong> 150분</li>
+<li><strong>선수과정:</strong> C1 하네스 첫걸음</li>
+<li><strong>사용 하네스:</strong> <code>creative-harness</code> (패턴: 생성-검증)</li>
+<li><strong>얻어가는 것(산출물):</strong><ul>
+<li>감성/기능/유머 3앵글 추천 카피 3세트</li>
+<li>키비주얼 컨셉 4안</li>
+<li>아트디렉터 검수 코멘트(통과·반려·재생성 지시)</li>
+<li>무드보드 요약</li>
+<li>재사용 가능한 나만의 크리에이티브 하네스</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="1-왜-이-하네스인가">1. 왜 이 하네스인가</h2>
+<p>크리에이티브 회의를 떠올려 보세요. 카피라이터가 헤드라인을 여러 개 던지고, 디자이너가 시안을 몇 장 깔고, 아트디렉터가 &quot;이건 톤이 안 맞아, 다시&quot;라고 말합니다. 좋은 광고는 <strong>만드는 사람과 검수하는 사람이 나뉘어 있을 때</strong> 나옵니다. 혼자 만들고 혼자 &quot;괜찮네&quot; 하면, 자기 시안을 사랑하는 눈을 못 이깁니다.</p>
+<p>혼자 AI에게 &quot;카피랑 비주얼 뽑아줘&quot;라고 하면 딱 그런 상황이 됩니다. 만든 결과를 만든 그 자리에서 스스로 칭찬하고 끝나 버립니다.</p>
+<table>
+<thead>
+<tr>
+<th>구분</th>
+<th>Before (혼자 뽑기)</th>
+<th>After (크리에이티브 하네스)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>카피</td>
+<td>한 방향 헤드라인 몇 개</td>
+<td>감성·기능·유머 3앵글 × A/B로 비교 가능한 세트</td>
+</tr>
+<tr>
+<td>비주얼</td>
+<td>시안 1~2장, 톤 제각각</td>
+<td>통일 팔레트로 4안 병렬 생성</td>
+</tr>
+<tr>
+<td>검수</td>
+<td>없음(자기만족)</td>
+<td>아트디렉터가 브랜드 톤 기준으로 통과·반려</td>
+</tr>
+<tr>
+<td>품질</td>
+<td>첫 결과에서 멈춤</td>
+<td>반려→재생성 루프로 올라감</td>
+</tr>
+</tbody></table>
+<p>이 과정이 만드는 것은 &quot;빨리 뽑아주는 기계&quot;가 아니라 <strong>뽑고, 검수하고, 다시 뽑는 작은 크리에이티브 조직</strong>입니다.</p>
+<hr>
+<h2 id="2-개념-이해-생성-검증">2. 개념 이해 — 생성-검증</h2>
+<h3 id="만드는-사람-검수하는-사람">만드는 사람 ≠ 검수하는 사람</h3>
+<p>생성-검증은 팀을 <strong>두 손</strong>으로 나누는 방식입니다.</p>
+<ul>
+<li><strong>만드는 손(생성):</strong> 카피라이터, 비주얼 디자이너. 자유롭게 여러 안을 쏟아냅니다.</li>
+<li><strong>보는 눈(검증):</strong> 아트디렉터. 만든 사람과 다른 자리에서, 브랜드 기준으로만 봅니다.</li>
+</ul>
+<p>핵심 규칙: <strong>같은 맥락에서 자기 것을 자기가 검수하지 않습니다.</strong> 카피라이터가 &quot;내 카피 좋죠?&quot;라고 스스로 판정하면 검수가 아니라 자기변호가 됩니다. 그래서 검수는 반드시 별도 팀원(아트디렉터)에게 맡깁니다.</p>
+<h3 id="리뷰-게이트-통과-못하면-못-나간다">리뷰 게이트 — 통과 못하면 못 나간다</h3>
+<p>아트디렉터는 결과물 앞에 서 있는 <strong>문지기(리뷰 게이트)</strong> 입니다.</p>
+<div class="codeblock"><span class="cbtag">코드</span><button class="copy" type="button">복사</button><pre><code>[카피라이터] ─┐
+              ├─▶ [아트디렉터 리뷰 게이트] ─▶ 통과 → 최종 패키지
+[비주얼 디자이너] ─┘         │
+                            └─ 톤 위반 → 반려 · 재생성 지시 → 다시 생성
+</code></pre></div>
+<p>브랜드 톤에 맞으면 통과, 어긋나면 <strong>반려하고 재생성을 지시</strong>합니다. 이 &quot;반려→재생성&quot;이 한 바퀴 돌 때마다 품질이 올라갑니다.</p>
+<h3 id="codex-image-병렬-컨셉-생성">codex-image 병렬 컨셉 생성</h3>
+<p>비주얼 디자이너는 키비주얼을 한 장씩 순서대로 그리지 않습니다. <strong>여러 컨셉을 한 번에 나란히</strong> 만들어 냅니다(병렬 생성, 최대 4~5안). 청량한 해변 버전, 미니멀 제품샷 버전, 활기찬 라이프스타일 버전을 동시에 깔아 놓고 비교하는 것이죠. 컨셉이 여러 개여야 아트디렉터가 고르고 버릴 수 있습니다.</p>
+<blockquote>
+<p><strong>이미지 안에는 글자를 넣지 않습니다.</strong> AI가 그린 글자는 오탈자가 나기 쉬워서, 카피(글자)는 나중에 디자인 단계에서 얹습니다. 이미지는 &quot;비주얼 무드&quot;만 담당합니다.</p>
+</blockquote>
+<h3 id="카피-ab-같은-메시지-다른-앵글">카피 A/B — 같은 메시지, 다른 앵글</h3>
+<p>하나의 제품 메시지도 <strong>말을 거는 각도</strong>를 바꾸면 도달하는 사람이 달라집니다.</p>
+<table>
+<thead>
+<tr>
+<th>앵글</th>
+<th>무엇을 건드리나</th>
+<th>예시 톤</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>감성</td>
+<td>기분·순간·감정</td>
+<td>&quot;이 여름, 죄책감 없이 시원하게&quot;</td>
+</tr>
+<tr>
+<td>기능</td>
+<td>사실·이점·근거</td>
+<td>&quot;설탕 0g, 칼로리 0, 청량함은 그대로&quot;</td>
+</tr>
+<tr>
+<td>유머</td>
+<td>위트·반전·공유 욕구</td>
+<td>&quot;다이어트 중이라 물만 마신다는 거짓말&quot;</td>
+</tr>
+</tbody></table>
+<p>세 앵글을 다 뽑아 비교하는 것이 카피 A/B입니다. 광고주에게 하나만 보여주는 게 아니라, 서로 다른 문을 세 개 열어 보여 주는 셈입니다.</p>
+<blockquote>
+<p><strong>AI는 매번 조금씩 다르게 답합니다(비결정성).</strong> 같은 브리프를 두 번 넣어도 헤드라인 문구는 달라질 수 있습니다. 이건 고장이 아니라 정상입니다. 그래서 우리는 결과를 <strong>한 번은 의심하고 검수</strong>합니다 — 그 역할이 아트디렉터입니다.</p>
+</blockquote>
+<hr>
+<h2 id="3-사용할-하네스-creative-harness">3. 사용할 하네스 — creative-harness</h2>
+<h3 id="팀-구성표">팀 구성표</h3>
+<table>
+<thead>
+<tr>
+<th>팀원(역할)</th>
+<th>광고팀 비유</th>
+<th>하는 일</th>
+<th>단계</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>카피라이터</td>
+<td>카피라이터</td>
+<td>감성/기능/유머 3앵글로 헤드라인·바디·CTA 창작</td>
+<td>생성</td>
+</tr>
+<tr>
+<td>비주얼 디자이너</td>
+<td>디자이너</td>
+<td>키비주얼 컨셉 4안 병렬 생성(codex-image)</td>
+<td>생성</td>
+</tr>
+<tr>
+<td>아트디렉터</td>
+<td>아트디렉터(검수)</td>
+<td>브랜드 톤 기준으로 검수·반려·재생성 지시</td>
+<td>검증</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>팀장(오케스트레이터):</strong> <code>creative-harness</code>. 카피라이터와 비주얼 디자이너를 <strong>동시에</strong> 생성으로 돌리고, 결과를 아트디렉터에게 넘겨 검수받습니다. 반려가 나오면 해당 팀원에게 재작업을 시킵니다.</li>
+<li><strong>협업 방식:</strong> 생성(둘) → 검증(하나) → 반려 시 되돌림. 이것이 생성-검증 패턴입니다.</li>
+</ul>
+<h3 id="트리거-프롬프트-복붙">트리거 프롬프트 (복붙)</h3>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>크리에이티브 제작 하네스를 구성해줘. 광고 카피를 감성/기능/유머 세 앵글로 뽑는 카피라이터, 키비주얼 컨셉을 여러 장 생성하는 비주얼 디자이너(codex-image 사용), 그리고 브랜드 톤앤매너 기준으로 결과를 검수하고 반려·재생성을 지시하는 아트디렉터가 필요해. 최종적으로 &#39;추천 카피 3세트 + 키비주얼 컨셉 4안 + 아트디렉터 코멘트&#39;를 줘.
+</code></pre></div>
+<p>이 한 문장에 <strong>도메인(크리에이티브 제작)·역할(카피/비주얼/아트디렉터)·산출물(카피 3세트+키비주얼 4안+코멘트)</strong> 3요소가 다 들어 있습니다. 하네스 요청문은 항상 이 3요소로 확인하세요.</p>
+<hr>
+<h2 id="4-실습-quot제로톡quot-여름-캠페인-크리에이티브">4. 실습 — &quot;제로톡&quot; 여름 캠페인 크리에이티브</h2>
+<p>가상 브랜드 <strong>제로톡</strong>(제로 슈거 스파클링 음료)의 여름 캠페인 크리에이티브 패키지를 만듭니다.</p>
+<h3 id="4-1-하네스-구성-복붙">4-1. 하네스 구성 (복붙)</h3>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>크리에이티브 제작 하네스를 구성해줘. 광고 카피를 감성/기능/유머 세 앵글로 뽑는 카피라이터, 키비주얼 컨셉을 여러 장 생성하는 비주얼 디자이너(codex-image 사용), 그리고 브랜드 톤앤매너 기준으로 검수하고 반려·재생성을 지시하는 아트디렉터가 필요해. 최종적으로 &#39;추천 카피 3세트 + 키비주얼 컨셉 4안 + 아트디렉터 코멘트&#39;를 줘.
+</code></pre></div>
+<h3 id="4-2-브리프브랜드-톤-입력-복붙">4-2. 브리프·브랜드 톤 입력 (복붙)</h3>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>브랜드: 제로톡 (제로 슈거 스파클링 음료)
+캠페인: 여름 시즌, 20~30대 타깃
+핵심 메시지: 설탕 0g인데 청량함은 진짜 — 죄책감 없이 시원하게
+브랜드 톤앤매너: 젊고 위트있게, 상쾌하고 솔직하게. 과장·의학적 효능 주장 금지, 다이어트 압박 조장 금지.
+카피는 감성/기능/유머 3앵글로, 각 앵글마다 헤드라인 + 바디 + CTA. 키비주얼은 서로 다른 컨셉 4안으로.
+</code></pre></div>
+<h3 id="4-3-단계-표">4-3. 단계 표</h3>
+<table>
+<thead>
+<tr>
+<th>단계</th>
+<th>무엇을 하나</th>
+<th>누가</th>
+<th>기대 결과</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>하네스 구성</td>
+<td>팀장</td>
+<td>카피/비주얼/아트디렉터 3인 팀 확인</td>
+</tr>
+<tr>
+<td>2</td>
+<td>브리프·톤 입력</td>
+<td>나</td>
+<td>브랜드 톤이 검수 기준으로 등록됨</td>
+</tr>
+<tr>
+<td>3</td>
+<td>카피 3앵글 생성</td>
+<td>카피라이터</td>
+<td>감성/기능/유머 헤드라인+바디+CTA 초안</td>
+</tr>
+<tr>
+<td>4</td>
+<td>키비주얼 4안 병렬 생성</td>
+<td>비주얼 디자이너</td>
+<td>서로 다른 컨셉 4안(텍스트 없는 이미지)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>톤 검수</td>
+<td>아트디렉터</td>
+<td>통과/반려 판정 + 반려 사유</td>
+</tr>
+<tr>
+<td>6</td>
+<td>반려분 재생성</td>
+<td>카피/비주얼</td>
+<td>지적받은 안만 다시 생성(생성-검증 루프)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>패키지 확정</td>
+<td>팀장</td>
+<td>추천 카피 3세트 + 키비주얼 4안 + 무드보드</td>
+</tr>
+</tbody></table>
+<h3 id="4-4-재생성반려-시켜-보기-복붙">4-4. 재생성(반려) 시켜 보기 (복붙)</h3>
+<p>첫 결과가 나오면 일부러 반려 루프를 한 번 돌려 봅니다. 생성-검증의 진짜 가치는 여기서 나옵니다.</p>
+<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>아트디렉터 기준으로 유머 앵글 헤드라인이 &#39;다이어트 압박&#39;으로 읽힐 위험이 있으면 반려하고, 압박 대신 위트로 웃게 만드는 방향으로 다시 뽑아줘. 통과한 감성·기능 앵글은 그대로 둬.
+</code></pre></div>
+<blockquote>
+<p>통과한 안은 두고 <strong>반려된 안만</strong> 다시 뽑는 것이 핵심입니다. 매번 전부 새로 뽑으면 힘들게 통과시킨 안까지 날아갑니다.</p>
+</blockquote>
+<hr>
+<h2 id="5-완성형-사례-quot제로톡quot-여름-캠페인-크리에이티브-패키지">5. 완성형 사례 — &quot;제로톡&quot; 여름 캠페인 크리에이티브 패키지</h2>
+<p>실제로 이 하네스를 돌렸을 때 나올 법한 결과물 전문은 아래 파일에 있습니다.</p>
+<p><strong>➡ <a href="../%EC%82%AC%EB%A1%80/C3_%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%8B%B0%EB%B8%8C%ED%8C%A8%ED%82%A4%EC%A7%80.md">C3 크리에이티브 패키지 전문 보기</a></strong> <em>(가상 브랜드·예시 데이터)</em></p>
+<h3 id="추천-카피-3세트-발췌">추천 카피 3세트 (발췌)</h3>
+<table>
+<thead>
+<tr>
+<th>앵글</th>
+<th>헤드라인</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>감성</td>
+<td>이 여름, 죄책감은 두고 시원함만 챙기세요</td>
+</tr>
+<tr>
+<td>기능</td>
+<td>설탕 0g. 칼로리 0. 청량함은 100%.</td>
+</tr>
+<tr>
+<td>유머</td>
+<td>&quot;물만 마셔요&quot;… 라고 말하며 몰래 여는 캔</td>
+</tr>
+</tbody></table>
+<p>각 세트의 바디카피·CTA·검수 결과는 사례 파일 5장에서 확인하세요.</p>
+<h3 id="키비주얼-컨셉-4안">키비주얼 컨셉 4안</h3>
+<p>아래 4안은 아트디렉터 검수를 통과한 최종 컨셉입니다. (이미지는 별도 생성 예정 — 컨셉·무드는 사례 파일 참조)</p>
+<p><img src="assets/img/course3-creative/c3-keyvisual-01.png" alt="키비주얼 1안 — 청량 여름 해변" loading="lazy"><span class="imgcap">키비주얼 1안 — 청량 여름 해변</span>
+<em>1안 · 청량/여름해변: 코발트빛 바다와 튀는 물방울, 코럴 포인트. 시원함을 몸으로 느끼게 하는 감성 컷.</em></p>
+<p><img src="assets/img/course3-creative/c3-keyvisual-02.png" alt="키비주얼 2안 — 미니멀 제품샷" loading="lazy"><span class="imgcap">키비주얼 2안 — 미니멀 제품샷</span>
+<em>2안 · 미니멀 제품샷: 오프화이트 배경 위 캔 하나, 절제된 그림자와 티일 하이라이트. &quot;설탕 0&quot;의 깔끔함을 시각화.</em></p>
+<p><img src="assets/img/course3-creative/c3-keyvisual-03.png" alt="키비주얼 3안 — 활기찬 라이프스타일" loading="lazy"><span class="imgcap">키비주얼 3안 — 활기찬 라이프스타일</span>
+<em>3안 · 활기찬 라이프스타일: 옥상 파티, 웃는 사람들의 손에 든 캔. 공유하고 싶은 여름 순간.</em></p>
+<p><img src="assets/img/course3-creative/c3-keyvisual-04.png" alt="키비주얼 4안 — 대담한 그래픽" loading="lazy"><span class="imgcap">키비주얼 4안 — 대담한 그래픽</span>
+<em>4안 · 대담한 그래픽: 네이비·코럴·티일의 큰 색면과 탄산 버블 패턴. SNS 썸네일에서 눈에 꽂히는 컷.</em></p>
+<h3 id="아트디렉터-검수-한-줄">아트디렉터 검수 한 줄</h3>
+<blockquote>
+<p>&quot;감성·기능 앵글 통과. 유머 앵글은 초안이 &#39;다이어트 압박&#39;으로 읽혀 <strong>1회 반려</strong> 후 재생성 → 통과. 키비주얼 4안은 팔레트 통일 확인, 2안 그림자만 톤 다운 지시.&quot; — 생성-검증 루프가 실제로 한 바퀴 돈 기록입니다.</p>
+</blockquote>
+<hr>
+<h2 id="6-자주-하는-실수">6. 자주 하는 실수</h2>
+<table>
+<thead>
+<tr>
+<th>실수</th>
+<th>이렇게 하세요</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>검수 기준(브랜드 톤)을 안 주고 &quot;검수해줘&quot;라고만 함 → 리뷰가 무의미</td>
+<td>톤앤매너를 <strong>먼저 문장으로</strong> 적어 아트디렉터에게 기준으로 넣기</td>
+</tr>
+<tr>
+<td>이미지 프롬프트에 &quot;제로톡 로고/글자 넣어줘&quot; 요구 → 오탈자 이미지</td>
+<td>이미지엔 <strong>텍스트 배제</strong>, 글자는 디자인 단계에서 따로 얹기</td>
+</tr>
+<tr>
+<td>첫 결과가 예뻐서 바로 확정(재생성 루프 생략)</td>
+<td>일부러 <strong>한 번은 반려</strong>시켜 생성-검증의 가치를 체험</td>
+</tr>
+<tr>
+<td>반려 시 전체를 다시 뽑음 → 통과안까지 사라짐</td>
+<td><strong>반려된 안만</strong> 재생성, 통과안은 유지 지시</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="7-체크리스트-amp-자기평가">7. 체크리스트 &amp; 자기평가</h2>
+<p><strong>완주 체크</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox"><label><code>creative-harness</code>로 카피·비주얼·아트디렉터 3인 팀을 구성했다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>브랜드 톤앤매너를 검수 기준으로 명문화해 넣었다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>카피를 감성/기능/유머 3앵글로 받았다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>키비주얼 컨셉 4안을 병렬 생성했다(텍스트 없는 이미지)</label></li>
+<li class="task-list-item"><input type="checkbox"><label>아트디렉터의 반려→재생성 루프를 최소 1회 돌렸다</label></li>
+<li class="task-list-item"><input type="checkbox"><label>최종 패키지(카피 3세트 + 키비주얼 4안 + 무드보드)를 정리했다</label></li>
+</ul>
+<p><strong>루브릭 요약 (통과 70%)</strong></p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>비중</th>
+<th>우수 기준</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>생성-검증 루프</td>
+<td>30%</td>
+<td>리뷰 게이트 작동, 반려·재생성 활용</td>
+</tr>
+<tr>
+<td>브랜드 톤 기준화</td>
+<td>25%</td>
+<td>검증 기준을 문장으로 명문화</td>
+</tr>
+<tr>
+<td>비주얼 컨셉</td>
+<td>25%</td>
+<td>컨셉 다양성·팔레트 적합성</td>
+</tr>
+<tr>
+<td>카피 A/B</td>
+<td>20%</td>
+<td>3앵글 구분·완성도</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="8-다음-과정">8. 다음 과정</h2>
+<p>카피와 비주얼을 팀으로 뽑고 검수까지 마쳤다면, 이제 이 크리에이티브를 <strong>어디에 얼마의 예산으로 태울지</strong>를 정할 차례입니다. C4에서는 감독자 패턴으로 미디어 플랜을 지휘합니다.</p>
+<ul>
+<li><strong>이전:</strong> C2 리서치·인사이트 하네스 (팬아웃/팬인)</li>
+<li><strong>다음:</strong> C4 미디어·캠페인 플래닝 하네스 (감독자)</li>
+</ul>
+
+<div class="pager">
+    <a class="prev" href="c2.html"><div class="dir">← 이전 과정</div><div class="ttl">C2 · 리서치·인사이트 하네스</div></a>
+    <a class="next" href="c4.html"><div class="dir">다음 과정 →</div><div class="ttl">C4 · 미디어·캠페인 플래닝 하네스</div></a>
+  </div></main></div><script>document.body.setAttribute('data-course','c3')</script><footer class="foot"><div class="wrap">
+<span>Harness Ad Academy · 광고 실무자를 위한 <code>revfactory/harness</code> 활용 교육</span>
+<span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
+</div></footer><script src="assets/app.js"></script></body></html>

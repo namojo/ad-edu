@@ -1,0 +1,228 @@
+<!doctype html><html lang="ko" data-theme="light"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>C4 사례 — Harness Ad Academy</title>
+<meta name="description" content="광고 실무자를 위한 revfactory/harness 활용 교육 · Harness Ad Academy">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
+<style>:root{--pat:#F59E0B}</style></head><body><header class="hdr"><div class="hdr-in">
+<a class="brand" href="index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고 실무 × AI 하네스</small></span></a>
+<nav class="nav">
+<a class="hideSm" href="index.html#courses">과정</a>
+<a class="hideSm" href="index.html#tracks">추천 트랙</a>
+<a class="hideSm" href="https://github.com/namojo/ad-edu" target="_blank" rel="noopener">GitHub</a>
+<button class="iconbtn" id="themeBtn" onclick="toggleTheme()" title="테마 전환" type="button">☾</button>
+</nav></div></header><div class="progwrap"><div class="progbar" id="progbar"></div></div><button class="iconbtn menutoggle" onclick="toggleMenu()" style="position:fixed;left:14px;bottom:16px;z-index:70;width:48px;height:48px;box-shadow:var(--shadow-lg)" type="button">☰</button><div class="scrim"></div><section class="coursebanner"><div class="wrap">
+        <span class="cid">C4 · 사례</span>
+        <h1>완성형 사례 — 미디어·캠페인 플래닝 하네스</h1>
+        <div class="metarow"><span class="chip pat">worked example</span><span class="chip">가상 브랜드 · 예시 데이터</span>
+        <a class="chip" href="c4.html">← 교재로 돌아가기</a></div>
+      </div></section><div class="layout">
+<aside class="side" id="side">
+  <h5>전체 과정</h5>
+  <ul class="courselist">
+    <li><a class="" style="--cdot:undefined" href="c1.html"><span class="dot"></span>C1 · 하네스 첫걸음</a></li><li><a class="" style="--cdot:undefined" href="c2.html"><span class="dot"></span>C2 · 리서치·인사이트 하네스</a></li><li><a class="" style="--cdot:undefined" href="c3.html"><span class="dot"></span>C3 · 크리에이티브 제작 하네스</a></li><li><a class="cur" style="--cdot:undefined" href="c4.html"><span class="dot"></span>C4 · 미디어·캠페인 플래닝 하네스</a></li><li><a class="" style="--cdot:undefined" href="c5.html"><span class="dot"></span>C5 · 콘텐츠·SNS 제작 하네스</a></li><li><a class="" style="--cdot:undefined" href="c6.html"><span class="dot"></span>C6 · 업무 자동화로 생산성 향상</a></li>
+  </ul>
+  <h5>이 과정 목차</h5>
+  <nav class="toc">
+    <a class="" href="#1-캠페인-브리프-요약">1. 캠페인 브리프 요약</a><a class="" href="#2-타겟-정의">2. 타겟 정의</a><a class="" href="#3-채널별-예산-배분표-추천안-균형형">3. 채널별 예산 배분표 (추천안 · 균형형)</a><a class="" href="#4-시나리오-비교-보수형-vs-공격형">4. 시나리오 비교 — 보수형 vs 공격형</a><a class="" href="#5-ab-테스트-계획">5. A/B 테스트 계획</a><a class="lvl3" href="#ab-크리에이티브-소구-ab-기능-vs-감성">A/B ① 크리에이티브 소구 A/B — 기능 vs 감성</a><a class="lvl3" href="#ab-영상-커버-ab-제품-단독-vs-인물제품">A/B ② 영상 커버 A/B — 제품 단독 vs 인물+제품</a><a class="lvl3" href="#ab-랜딩-cta-ab-맛보기-소구-vs-가격-인센티브">A/B ③ 랜딩 CTA A/B — 맛보기 소구 vs 가격 인센티브</a><a class="" href="#6-운영-메모">6. 운영 메모</a>
+  </nav>
+</aside><main class="article"><h1>제로톡 런칭 미디어 플랜 (완성형 사례)</h1>
+<blockquote>
+<p><code>media-harness</code>(감독자 패턴)를 실제로 돌렸을 때 나올 법한 산출물 예시입니다.
+<strong>모든 수치·브랜드는 &quot;예시 데이터&quot;입니다.</strong> 실제 매체 단가·성과가 아니라, 교재 학습용으로 그럴듯하게 구성한 가상 값입니다. 실무 적용 시에는 반드시 최신 매체 단가와 자사 데이터로 다시 검산하세요.</p>
+</blockquote>
+<ul>
+<li>브랜드: <strong>제로톡</strong> (제로 슈거 스파클링 음료 · 가상 브랜드)</li>
+<li>캠페인: 신제품 런칭</li>
+<li>총예산: <strong>5,000만원 (50,000,000원)</strong></li>
+<li>작성: 미디어 하네스 감독자(미디어 플래너) 취합본</li>
+</ul>
+<hr>
+<h2 id="1-캠페인-브리프-요약">1. 캠페인 브리프 요약</h2>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>캠페인명</td>
+<td>제로톡 런칭 — &quot;죄책감 없이, 톡 쏘게&quot;</td>
+</tr>
+<tr>
+<td>기간</td>
+<td>2026-08-01 ~ 2026-09-30 (약 8주)</td>
+</tr>
+<tr>
+<td>목표</td>
+<td>(1) 런칭 인지도 확보 (2) 초기 구매 전환 확보</td>
+</tr>
+<tr>
+<td>핵심 메시지</td>
+<td>&quot;제로 슈거인데 톡 쏜다 — 제로톡&quot;</td>
+</tr>
+<tr>
+<td>총예산</td>
+<td>5,000만원 (예시 데이터)</td>
+</tr>
+<tr>
+<td>대표 KPI</td>
+<td>총 도달 1,000만+ · 총 조회 650만+ · 전환(구매·장바구니) 3,800+ · 브랜드 검색량 상승</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="2-타겟-정의">2. 타겟 정의</h2>
+<p><strong>1차 타겟 (핵심)</strong></p>
+<ul>
+<li>만 20~29세, 수도권 거주, 건강·다이어트에 관심 높은 대학생·사회 초년생</li>
+<li>페르소나 한 줄: &quot;칼로리는 신경 쓰지만 탄산의 짜릿함은 포기 못 하는 27세 직장인 &#39;지우&#39;&quot;</li>
+</ul>
+<p><strong>2차 타겟 (확장)</strong></p>
+<ul>
+<li>만 30~39세, 헬스·홈트에 관심 있는 제로 음료 재구매층</li>
+<li>페르소나 한 줄: &quot;운동 후 보상 음료를 찾는 34세 홈트족 &#39;현우&#39;&quot;</li>
+</ul>
+<hr>
+<h2 id="3-채널별-예산-배분표-추천안-균형형">3. 채널별 예산 배분표 (추천안 · 균형형)</h2>
+<blockquote>
+<p>인지도(도달)와 전환의 균형을 맞춘 기본 배분안입니다. 아래 표의 예산 합계가 <strong>정확히 5,000만원</strong>이 되는지 항상 검산하세요.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>채널</th>
+<th>역할</th>
+<th align="right">예산(원)</th>
+<th align="right">비중</th>
+<th>예상 핵심 KPI (예시 데이터)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>유튜브 (인스트림+쇼츠)</td>
+<td>도달·조회</td>
+<td align="right">15,000,000</td>
+<td align="right">30%</td>
+<td>조회 250만 · CPV 6원 · 완주율 45%</td>
+</tr>
+<tr>
+<td>인스타그램 (릴스+피드)</td>
+<td>인지·브랜딩</td>
+<td align="right">12,500,000</td>
+<td align="right">25%</td>
+<td>도달 320만 · CPM 3,900원 · 저장 1.2만</td>
+</tr>
+<tr>
+<td>네이버 (검색+GFA)</td>
+<td>전환·수확</td>
+<td align="right">9,500,000</td>
+<td align="right">19%</td>
+<td>유입 9.5만 · CPC 100원 · 전환 3,800</td>
+</tr>
+<tr>
+<td>틱톡</td>
+<td>바이럴·조회</td>
+<td align="right">8,000,000</td>
+<td align="right">16%</td>
+<td>조회 400만 · CPV 2원 · 해시태그 참여 8천</td>
+</tr>
+<tr>
+<td>디지털 옥외(DOOH)</td>
+<td>지역 인지</td>
+<td align="right">5,000,000</td>
+<td align="right">10%</td>
+<td>도달 180만(추정) · 핵심 상권 3곳</td>
+</tr>
+<tr>
+<td><strong>합계</strong></td>
+<td>—</td>
+<td align="right"><strong>50,000,000</strong></td>
+<td align="right"><strong>100%</strong></td>
+<td>총 도달 1,000만+ · 총 조회 650만+</td>
+</tr>
+</tbody></table>
+<p><strong>예산 합계 검산: 15,000,000 + 12,500,000 + 9,500,000 + 8,000,000 + 5,000,000 = 50,000,000원 (일치)</strong>
+<strong>비중 합계 검산: 30 + 25 + 19 + 16 + 10 = 100% (일치)</strong></p>
+<hr>
+<h2 id="4-시나리오-비교-보수형-vs-공격형">4. 시나리오 비교 — 보수형 vs 공격형</h2>
+<p>같은 5,000만원을 목표에 따라 다르게 배분한 두 가지 대안입니다. 둘 다 합계는 5,000만원으로 맞췄습니다.</p>
+<table>
+<thead>
+<tr>
+<th>채널</th>
+<th align="right">보수형(안정 도달 중심)</th>
+<th align="right">공격형(숏폼·전환 중심)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>유튜브</td>
+<td align="right">20,000,000 (40%)</td>
+<td align="right">12,500,000 (25%)</td>
+</tr>
+<tr>
+<td>인스타그램</td>
+<td align="right">12,500,000 (25%)</td>
+<td align="right">12,500,000 (25%)</td>
+</tr>
+<tr>
+<td>네이버</td>
+<td align="right">10,000,000 (20%)</td>
+<td align="right">10,000,000 (20%)</td>
+</tr>
+<tr>
+<td>틱톡</td>
+<td align="right">4,000,000 (8%)</td>
+<td align="right">12,500,000 (25%)</td>
+</tr>
+<tr>
+<td>디지털 옥외(DOOH)</td>
+<td align="right">3,500,000 (7%)</td>
+<td align="right">2,500,000 (5%)</td>
+</tr>
+<tr>
+<td><strong>합계</strong></td>
+<td align="right"><strong>50,000,000 (100%)</strong></td>
+<td align="right"><strong>50,000,000 (100%)</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>보수형</strong>: 검증된 대형 매체(유튜브·인스타) 비중을 높여 안정적 도달과 브랜드 세이프티를 확보. 런칭 인지도가 최우선일 때.</li>
+<li><strong>공격형</strong>: 틱톡·숏폼 비중을 크게 올려 바이럴과 초기 전환을 노림. 반응 데이터를 빠르게 얻고 싶을 때. 변동성은 더 큼.</li>
+<li>검산: 보수형 40+25+20+8+7=100% / 공격형 25+25+20+25+5=100% (둘 다 일치)</li>
+</ul>
+<hr>
+<h2 id="5-ab-테스트-계획">5. A/B 테스트 계획</h2>
+<p>각 테스트는 &quot;가설 → 변인(하나만 바꾼다) → 성공지표&quot;로 설계합니다. 한 번에 변인 하나만 바꿔야 원인을 구분할 수 있습니다.</p>
+<h3 id="ab-크리에이티브-소구-ab-기능-vs-감성">A/B ① 크리에이티브 소구 A/B — 기능 vs 감성</h3>
+<ul>
+<li>가설: 20대 초반에게는 감성 소구(리프레시 순간)가 기능 소구(제로 슈거)보다 완주율과 저장률이 높을 것이다.</li>
+<li>변인: 영상 첫 3초 훅 메시지 유형 (기능형 카피 vs 감성형 카피) — 나머지 편집·길이·음악은 동일</li>
+<li>성공지표: 완주율, 저장·공유율</li>
+<li>집행: 인스타 릴스 / 유튜브 쇼츠</li>
+</ul>
+<h3 id="ab-영상-커버-ab-제품-단독-vs-인물제품">A/B ② 영상 커버 A/B — 제품 단독 vs 인물+제품</h3>
+<ul>
+<li>가설: 인물이 함께 등장한 커버가 제품 단독컷보다 클릭률(CTR)을 높일 것이다.</li>
+<li>변인: 커버(썸네일) 이미지 유형 — 영상 본편은 동일</li>
+<li>성공지표: 클릭률(CTR), 조회당 비용(CPV)</li>
+<li>집행: 유튜브 / 틱톡</li>
+</ul>
+<h3 id="ab-랜딩-cta-ab-맛보기-소구-vs-가격-인센티브">A/B ③ 랜딩 CTA A/B — 맛보기 소구 vs 가격 인센티브</h3>
+<ul>
+<li>가설: 가격 인센티브 CTA(&quot;첫 구매 20% 할인&quot;)가 단순 맛보기 CTA(&quot;지금 맛보기&quot;)보다 전환율을 높일 것이다.</li>
+<li>변인: 네이버 GFA 랜딩의 CTA 문구 — 랜딩 디자인·상품 정보는 동일</li>
+<li>성공지표: 전환율(CVR), 장바구니 담기 수</li>
+<li>집행: 네이버 GFA</li>
+</ul>
+<hr>
+<h2 id="6-운영-메모">6. 운영 메모</h2>
+<ul>
+<li>위 수치는 <strong>예시 데이터</strong>입니다. 캠페인 시작 전 실제 매체 단가로 CPV·CPM·CPC를 다시 넣고 합계를 재검산하세요.</li>
+<li>AI가 만든 배분표는 매번 조금씩 다르게 나올 수 있습니다(비결정성). 숫자를 그대로 믿지 말고, 최소 한 번은 합계와 KPI 논리를 사람이 직접 검증하세요.</li>
+<li>예산 배분을 바꾸면 반드시 합계가 5,000만원인지, 비중 합계가 100%인지 다시 확인합니다.</li>
+</ul>
+<div class="pager"><a class="prev" href="c4.html"><div class="dir">← 교재</div><div class="ttl">미디어·캠페인 플래닝 하네스</div></a></div></main></div><footer class="foot"><div class="wrap">
+<span>Harness Ad Academy · 광고 실무자를 위한 <code>revfactory/harness</code> 활용 교육</span>
+<span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
+</div></footer><script src="assets/app.js"></script></body></html>
