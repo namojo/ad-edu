@@ -545,11 +545,11 @@ async function build() {
   });
   const courses = [
     ["C1", "하네스 첫걸음", "기초 · 지금 여기", CORAL, true],
-    ["C2", "리서치·인사이트", "팬아웃/팬인", PATTERN.fanout, false],
-    ["C3", "크리에이티브 제작", "생성-검증", PATTERN.gencheck, false],
-    ["C4", "미디어·캠페인 플래닝", "감독자", PATTERN.supervisor, false],
-    ["C5", "콘텐츠·SNS 제작", "파이프라인", PATTERN.pipeline, false],
-    ["C6", "업무 자동화·심화", "계층 위임+커스텀", PATTERN.hierarch, false],
+    ["C2", "업무 자동화", "초급 · 반복업무", PATTERN.hierarch, false],
+    ["C3", "리서치·인사이트", "팬아웃/팬인", PATTERN.fanout, false],
+    ["C4", "크리에이티브 제작", "생성-검증", PATTERN.gencheck, false],
+    ["C5", "미디어·캠페인 플래닝", "감독자", PATTERN.supervisor, false],
+    ["C6", "콘텐츠·SNS 제작", "파이프라인", PATTERN.pipeline, false],
   ];
   courses.forEach((c, i) => {
     const col = i % 3, row = Math.floor(i / 3);
@@ -600,7 +600,7 @@ async function build() {
   s.addText("한 문장이면 충분합니다.", { x: 0, y: 2.05, w: W, h: 0.8, fontFace: FONT, fontSize: 40, bold: true, color: WHITE, align: "center", margin: 0 });
   s.addText("이제 여러분의 업무로 하네스를 데려가세요.", { x: 0, y: 3.0, w: W, h: 0.5, fontFace: FONT, fontSize: 18, color: "CBD5E1", align: "center", margin: 0 });
   s.addShape(p.shapes.ROUNDED_RECTANGLE, { x: 3.7, y: 3.85, w: 2.6, h: 0.55, fill: { color: CORAL }, rectRadius: 0.28 });
-  s.addText("다음 과정 · C2 리서치 하네스", { x: 3.7, y: 3.9, w: 2.6, h: 0.45, fontFace: FONT, fontSize: 13, bold: true, color: WHITE, align: "center", valign: "middle", margin: 0 });
+  s.addText("다음 과정 · C2 업무 자동화", { x: 3.7, y: 3.9, w: 2.6, h: 0.45, fontFace: FONT, fontSize: 13, bold: true, color: WHITE, align: "center", valign: "middle", margin: 0 });
 
   await p.writeFile({ fileName: "/Users/andy/Work/ad-edu/harness-ad-academy/course1-basics/deck/C1_하네스_첫걸음_강의덱.pptx" });
   console.log("DECK WRITTEN");

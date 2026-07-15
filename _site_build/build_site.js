@@ -10,13 +10,13 @@ marked.use({ gfm: true, breaks: false, mangle: false, headerIds: false });
 
 // ---------- course registry ----------
 const COURSES = [
-  { id: "c1", slug: "course1-basics",     pat: "#3B82F6", book: "course1-basics/교재/C1_교재.md",     imgdir: "course1-basics/images",   caseFile: null },
-  { id: "c2", slug: "course2-research",   pat: "#8B5CF6", book: "course2-research/교재/C2_교재.md",   imgdir: "course2-research/images", caseFile: "course2-research/사례/C2_인사이트보고서.md" },
-  { id: "c3", slug: "course3-creative",   pat: "#FF6B4A", book: "course3-creative/교재/C3_교재.md",   imgdir: "course3-creative/images", caseFile: "course3-creative/사례/C3_크리에이티브패키지.md" },
-  { id: "c4", slug: "course4-media",      pat: "#F59E0B", book: "course4-media/교재/C4_교재.md",      imgdir: "course4-media/images",    caseFile: "course4-media/사례/C4_미디어플랜.md" },
-  { id: "c5", slug: "course5-content",    pat: "#3B82F6", book: "course5-content/교재/C5_교재.md",    imgdir: "course5-content/images",  caseFile: "course5-content/사례/C5_콘텐츠캘린더.md" },
-  { id: "c6", slug: "course6-automation", pat: "#EC4899", book: "course6-automation/교재/C6_교재.md", imgdir: "course6-automation/images", caseFile: "course6-automation/사례/C6_주간리포트_자동화.md" },
-  { id: "c7", slug: "course7-video",      pat: "#6366F1", book: "course7-video/교재/C7_교재.md",      imgdir: "course7-video/images",    caseFile: "course7-video/사례/C7_시드댄스_영상캠페인.md" },
+  { id: "c1", slug: "course1-basics",     pat: "#3B82F6", book: "course1-basics/교재/C1_교재.md",         imgdir: "course1-basics/images",     caseFile: null },
+  { id: "c2", slug: "course2-automation", pat: "#EC4899", book: "course2-automation/교재/C2_교재.md",     imgdir: "course2-automation/images", caseFile: "course2-automation/사례/C2_주간리포트_자동화.md" },
+  { id: "c3", slug: "course3-research",   pat: "#8B5CF6", book: "course3-research/교재/C3_교재.md",       imgdir: "course3-research/images",   caseFile: "course3-research/사례/C3_인사이트보고서.md" },
+  { id: "c4", slug: "course4-creative",   pat: "#FF6B4A", book: "course4-creative/교재/C4_교재.md",       imgdir: "course4-creative/images",   caseFile: "course4-creative/사례/C4_크리에이티브패키지.md" },
+  { id: "c5", slug: "course5-media",      pat: "#F59E0B", book: "course5-media/교재/C5_교재.md",          imgdir: "course5-media/images",      caseFile: "course5-media/사례/C5_미디어플랜.md" },
+  { id: "c6", slug: "course6-content",    pat: "#3B82F6", book: "course6-content/교재/C6_교재.md",        imgdir: "course6-content/images",    caseFile: "course6-content/사례/C6_콘텐츠캘린더.md" },
+  { id: "c7", slug: "course7-video",      pat: "#6366F1", book: "course7-video/교재/C7_교재.md",          imgdir: "course7-video/images",      caseFile: "course7-video/사례/C7_시드댄스_영상캠페인.md" },
 ];
 const bySlug = Object.fromEntries(COURSES.map(c => [c.slug, c]));
 const byId = Object.fromEntries(COURSES.map(c => [c.id, c]));
@@ -198,9 +198,9 @@ function landing() {
   }).join("");
 
   const tracks = [
-    ["기획 / AE", ["C1", "C2", "C4", "C6"]],
-    ["크리에이티브 / 콘텐츠", ["C1", "C3", "C5", "C7", "C6"]],
-    ["미디어 / 퍼포먼스", ["C1", "C4", "C5", "C6"]],
+    ["기획 / AE", ["C1", "C2", "C3", "C5"]],
+    ["크리에이티브 / 콘텐츠", ["C1", "C2", "C4", "C6", "C7"]],
+    ["미디어 / 퍼포먼스", ["C1", "C2", "C5", "C6"]],
     ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6", "C7"]],
   ].map(([name, steps]) => `<div class="track"><h4>${name}</h4><div class="flow">${steps.map((s, i) => `${i ? '<span class="arr">→</span>' : ''}<a class="step" href="${s.toLowerCase()}.html">${s}</a>`).join("")}</div></div>`).join("");
 

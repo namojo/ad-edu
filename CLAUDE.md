@@ -11,13 +11,13 @@
 **트리거:** 아래 오케스트레이터 스킬을 상황에 맞게 사용하라. 단순 질문은 직접 응답 가능.
 | 오케스트레이터 스킬 | 언제 | 패턴 |
 |---|---|---|
-| `starter-harness` | 첫 하네스 실습, 미니 리서치+카피 | 파이프라인 |
-| `research-harness` | 시장·소비자·경쟁·트렌드 병렬 조사 → 인사이트 | 팬아웃/팬인 |
-| `creative-harness` | 카피 A/B + 키비주얼 컨셉 + 아트디렉터 검수 | 생성-검증 |
-| `media-harness` | 타겟·채널믹스·예산배분·A/B 미디어 플랜 | 감독자 |
-| `content-harness` | 트렌드→기획→대본→썸네일→SEO 콘텐츠 | 파이프라인 |
-| `automation-harness` | 반복 업무 자동화 + PPT/Word/Excel/PDF 문서 생성 | 계층위임+전문가풀 |
-| `video-content-harness` | 최신 Seedance로 숏폼·광고 영상(대본→스토리보드→샷 프롬프트→배포) | 파이프라인(영상) |
+| `starter-harness` | (C1) 첫 하네스 실습, 미니 리서치+카피 | 파이프라인 |
+| `automation-harness` | (C2) 반복 업무 자동화 + PPT/Word/Excel/PDF 문서 생성 | 계층위임+전문가풀 |
+| `research-harness` | (C3) 시장·소비자·경쟁·트렌드 병렬 조사 → 인사이트 | 팬아웃/팬인 |
+| `creative-harness` | (C4) 카피 A/B + 키비주얼 컨셉 + 아트디렉터 검수 | 생성-검증 |
+| `media-harness` | (C5) 타겟·채널믹스·예산배분·A/B 미디어 플랜 | 감독자 |
+| `content-harness` | (C6) 트렌드→기획→대본→썸네일→SEO 콘텐츠 | 파이프라인 |
+| `video-content-harness` | (C7) 최신 Seedance로 숏폼·광고 영상(대본→스토리보드→샷 프롬프트→배포) | 파이프라인(영상) |
 
 **변경 이력:**
 | 날짜 | 변경 내용 | 대상 | 사유 |
