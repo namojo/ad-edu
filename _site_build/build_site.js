@@ -58,10 +58,8 @@ function process(html, ctx) {
   });
   // code blocks -> copyable
   html = html.replace(/<pre><code(?: class="language-([\w-]+)")?>([\s\S]*?)<\/code><\/pre>/g, (m, lang, code) => {
-    const isPrompt = (lang === "text" || lang === "" || lang == null) && /하네스|구성해줘|줘\.|리서치|팀/.test(code) ;
     const prompt = lang === "text";
-    const tag = prompt ? "프롬프트 · 복사해서 사용" : (lang ? lang : "코드");
-    return `<div class="codeblock${prompt ? " prompt" : ""}"><span class="cbtag">${tag}</span><button class="copy" type="button">복사</button><pre><code>${code}</code></pre></div>`;
+    return `<div class="codeblock${prompt ? " prompt" : ""}"><button class="copy" type="button">복사</button><pre><code>${code}</code></pre></div>`;
   });
   // images: rewrite ../images/ and add caption from alt
   html = html.replace(/<img src="\.\.\/images\/([^"]+)"(?:\s+alt="([^"]*)")?[^>]*>/g, (m, file, alt) => {

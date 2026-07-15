@@ -197,21 +197,21 @@
 <p>리서처 → 카피라이터. 앞사람의 결과가 뒷사람의 입력이 되는 전형적인 <strong>파이프라인</strong>입니다. 팀장(<code>starter-harness</code>)은 이 순서를 관리하고 두 결과를 하나로 묶어 여러분에게 전달합니다.</p>
 <h3 id="트리거-프롬프트">트리거 프롬프트</h3>
 <p>아래 문장이 이 팀을 깨우는 <strong>트리거</strong>입니다. 이 한 문장 안에 3요소(도메인·역할·산출물)가 모두 들어 있는지 눈으로 확인해 보세요.</p>
-<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
+<div class="codeblock prompt"><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
 </code></pre></div>
 <hr>
 <!-- construction-section -->
 <h2 id="3-b-이-하네스를-직접-만들기-harness-구성">3-B. 이 하네스를 직접 만들기 — <code>/harness</code> 구성</h2>
 <p>지금까지 실습에서 쓴 리서처+카피라이터 팀은 미리 만들어 둔 것입니다. 그런데 이 팀 자체도 harness 플러그인에게 한 문장을 주면 자동으로 만들어집니다. 팀장(오케스트레이터)·팀원(에이전트)·업무 매뉴얼(스킬)이 한 번에 만들어집니다. 여러분도 아래 방법으로 직접 만들 수 있습니다.</p>
 <p><strong>① harness 플러그인 설치 (이 과정에서 한 번만 · 보통 관리자가 미리 설치)</strong></p>
-<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>/plugin marketplace add revfactory/harness
+<div class="codeblock prompt"><button class="copy" type="button">복사</button><pre><code>/plugin marketplace add revfactory/harness
 /plugin install harness-marketplace
 </code></pre></div>
 <blockquote>
 <p>사내 마켓플레이스를 쓰면 그 경로로 바꾸세요.</p>
 </blockquote>
 <p><strong>② 이 하네스를 만드는 구성 프롬프트 — 그대로 입력하세요</strong></p>
-<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 광고를 돕는 작은 팀이 필요해. 시장·경쟁을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터가 순서대로(조사 → 카피) 일하는 파이프라인 팀이야. 조사 요약과 헤드라인을 결과로 주고, 나중에 다른 제품에도 다시 쓸 수 있게 만들어줘.
+<div class="codeblock prompt"><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 광고를 돕는 작은 팀이 필요해. 시장·경쟁을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터가 순서대로(조사 → 카피) 일하는 파이프라인 팀이야. 조사 요약과 헤드라인을 결과로 주고, 나중에 다른 제품에도 다시 쓸 수 있게 만들어줘.
 </code></pre></div>
 <p><strong>③ 무엇이 만들어지나요</strong></p>
 <table>
@@ -247,10 +247,10 @@
 <li>실습용 작업 폴더(예: <code>harness-lab</code>)가 하나 준비됐나요?</li>
 </ul>
 <h3 id="복붙-프롬프트-그대로-붙여넣기">복붙 프롬프트 (그대로 붙여넣기)</h3>
-<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
+<div class="codeblock prompt"><button class="copy" type="button">복사</button><pre><code>하네스 구성해줘. 신제품 음료 런칭을 돕는 작은 팀이 필요해 — 시장/경쟁 상황을 빠르게 조사하는 리서처와, 그 조사를 바탕으로 광고 헤드라인을 뽑는 카피라이터. 조사 요약 1페이지와 헤드라인 5개를 결과로 줘.
 </code></pre></div>
 <p>톤을 바꿔 다시 뽑는 <strong>재요청</strong>(7단계)에는 이 문장을 이어서 넣습니다.</p>
-<div class="codeblock prompt"><span class="cbtag">프롬프트 · 복사해서 사용</span><button class="copy" type="button">복사</button><pre><code>헤드라인을 더 위트있게, 20대가 SNS에서 공유하고 싶어할 톤으로 5개 다시 뽑아줘.
+<div class="codeblock prompt"><button class="copy" type="button">복사</button><pre><code>헤드라인을 더 위트있게, 20대가 SNS에서 공유하고 싶어할 톤으로 5개 다시 뽑아줘.
 </code></pre></div>
 <h3 id="7단계-따라하기">7단계 따라하기</h3>
 <table>

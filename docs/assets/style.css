@@ -11,9 +11,13 @@
   --mono:"D2Coding","SF Mono",ui-monospace,"JetBrains Mono",Menlo,monospace;
 }
 :root[data-theme="dark"]{
-  --navy:#e6edf6; --ink:#e6edf6; --slate:#94a3b8; --paper:#0f172a; --white:#0b1220;
-  --line:#22304a; --mist:#22304a; --card:#111a2e; --bg:#0b1220; --bg-2:#0f1a30;
+  /* keep --navy dark: it is a surface color (table headers), not text */
+  --ink:#e6edf6; --slate:#94a3b8; --paper:#0f172a;
+  --line:#22304a; --mist:#22304a; --card:#111a2e; --bg:#0b1220; --bg-2:#16223c;
+  --th-bg:#243a5e;
 }
+:root[data-theme="dark"] .article thead th{background:var(--th-bg)}
+:root[data-theme="dark"] .article table{border-color:var(--line)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth; scroll-padding-top:88px}
 body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);
