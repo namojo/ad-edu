@@ -1,6 +1,6 @@
 ---
 site_title: Harness Ad Academy
-subtitle: 광고 실무자를 위한 revfactory/harness 활용 교육
+subtitle: 광고 실무자를 위한 harness 활용 교육
 audience: 비개발자 광고 실무자 (기획/AE · 크리에이티브 · 미디어 · 콘텐츠)
 courses: 6
 brand_colors:

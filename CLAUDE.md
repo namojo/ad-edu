@@ -1,6 +1,6 @@
 # Harness Ad Academy
 
-광고 실무자(비개발자)를 위한 `revfactory/harness` 활용 교육 프로그램. 6개 과정의 도메인 하네스 + md 교재 + 완성형 사례.
+광고 실무자(비개발자)를 위한 `harness` 활용 교육 프로그램. 6개 과정의 도메인 하네스 + md 교재 + 완성형 사례.
 
 제작 규약(SSOT): `_ssot/conventions.md` · 상위 설계: `spec/HARNESS_AD_ACADEMY_SPEC.md`
 

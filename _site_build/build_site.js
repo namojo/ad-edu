@@ -86,7 +86,7 @@ function parseNav(md) {
 const HEAD = (title, extra = "") => `<!doctype html><html lang="ko" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
-<meta name="description" content="광고 실무자를 위한 revfactory/harness 활용 교육 · Harness Ad Academy">
+<meta name="description" content="광고 실무자를 위한 harness 활용 교육 · Harness Ad Academy">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
@@ -102,7 +102,7 @@ const HEADER = (rel = "") => `<header class="hdr"><div class="hdr-in">
 </nav></div></header>`;
 
 const FOOT = () => `<footer class="foot"><div class="wrap">
-<span>Harness Ad Academy · 광고 실무자를 위한 <code>revfactory/harness</code> 활용 교육</span>
+<span>Harness Ad Academy · 광고 실무자를 위한 <code>harness</code> 활용 교육</span>
 <span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
 </div></footer><script src="assets/app.js"></script></body></html>`;
 

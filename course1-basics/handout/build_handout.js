@@ -200,7 +200,7 @@ children.push(h1("사전 준비 — 설치와 활성화", "04"));
 children.push(body("실습 전에 아래 항목을 준비합니다. 회사 IT 담당 또는 강사의 안내를 함께 참고하세요."));
 children.push(h2("설치 단계"));
 children.push(numRef("install", [t("Claude Code", { bold: true }), t("가 PC에 설치되어 있고 로그인되어 있는지 확인한다.")]));
-children.push(numRef("install", [t("플러그인 마켓플레이스를 추가한다: "), t("/plugin marketplace add revfactory/harness", { font: "D2Coding", size: 18, color: NAVY })]));
+children.push(numRef("install", [t("플러그인 마켓플레이스를 추가한다: "), t("/plugin marketplace add <하네스-마켓플레이스>", { font: "D2Coding", size: 18, color: NAVY })]));
 children.push(numRef("install", [t("플러그인을 설치한다: "), t("/plugin install harness-marketplace", { font: "D2Coding", size: 18, color: NAVY })]));
 children.push(numRef("install", [t("에이전트 팀 기능을 활성화한다 "), t("(환경변수 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1)", { color: SLATE }), t(".")]));
 children.push(numRef("install", [t("실습용 폴더를 하나 만든다 "), t("(예: ~/harness-lab/)", { font: "D2Coding", size: 18, color: SLATE }), t(".")]));

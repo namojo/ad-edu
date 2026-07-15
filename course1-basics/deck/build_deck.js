@@ -129,7 +129,7 @@ async function build() {
     x: 0.7, y: 2.9, w: 4.5, h: 0.5, fontFace: FONT, fontSize: 19, color: "CBD5E1", margin: 0,
   });
   s.addShape(p.shapes.RECTANGLE, { x: 0.72, y: 3.62, w: 0.5, h: 0.05, fill: { color: CORAL } });
-  s.addText("광고 실무자를 위한 revfactory/harness 활용 · 120분", {
+  s.addText("광고 실무자를 위한 harness 활용 · 120분", {
     x: 0.7, y: 3.82, w: 4.6, h: 0.4, fontFace: FONT, fontSize: 12.5, color: "94A3B8", margin: 0,
   });
 
@@ -529,7 +529,7 @@ async function build() {
     s.addText(st[1], { x: x + 0.2, y: 2.95, w: 2.45, h: 0.35, fontFace: FONT, fontSize: 15, bold: true, color: WHITE, align: "center", margin: 0 });
     s.addText(st[2], { x: x + 0.2, y: 3.3, w: 2.45, h: 0.35, fontFace: FONT, fontSize: 11, color: "94A3B8", align: "center", margin: 0 });
   });
-  s.addText("출처: revfactory/claude-code-harness A/B 실험 (n=15, 저자 자체 측정, 제3자 재현 진행 중). 조직 도입 시 2~4주 내부 파일럿으로 자체 수치 측정 권장.", {
+  s.addText("출처: 저자 자체 A/B 실험 (n=15, 저자 자체 측정, 제3자 재현 진행 중). 조직 도입 시 2~4주 내부 파일럿으로 자체 수치 측정 권장.", {
     x: 0.55, y: 4.15, w: 8.9, h: 0.7, fontFace: FONT, fontSize: 11, italic: true, color: "94A3B8", align: "center", margin: 0,
   });
   pageNum(s, 15);
