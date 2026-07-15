@@ -29,9 +29,10 @@ brand_colors:
 | C4 | **미디어·캠페인 플래닝 하네스** — 감독자가 캠페인을 지휘 | 중급 | 감독자 | [교재](course4-media/교재/C4_교재.md) | [미디어 플랜](course4-media/사례/C4_미디어플랜.md) |
 | C5 | **콘텐츠·SNS 제작 하네스** — 기획부터 썸네일까지 한 파이프라인 | 중급 | 파이프라인 | [교재](course5-content/교재/C5_교재.md) | [콘텐츠 캘린더](course5-content/사례/C5_콘텐츠캘린더.md) |
 | C6 | **업무 자동화로 생산성 향상** — 나만의 하네스·문서 자동화 | 심화 | 계층위임+전문가풀 | [교재](course6-automation/교재/C6_교재.md) | [주간리포트 자동화](course6-automation/사례/C6_주간리포트_자동화.md) |
+| C7 | **Seedance 영상 콘텐츠 하네스** — 대본에서 숏폼 영상까지 | 심화 | 파이프라인(영상) | [교재](course7-video/교재/C7_교재.md) | [Seedance 영상 캠페인](course7-video/사례/C7_시드댄스_영상캠페인.md) |
 
-> 6과정을 이수하면 harness의 **6가지 아키텍처 패턴**을 광고 실무 맥락에서 모두 익힙니다.
-> 가상 브랜드 **"제로톡"**(제로 슈거 스파클링 음료)이 C1~C5를 관통해 학습 몰입도를 높입니다.
+> C1~C6으로 harness의 **6가지 아키텍처 패턴**을 익히고, C7에서 **최신 Seedance로 영상 콘텐츠**까지 확장합니다.
+> 가상 브랜드 **"제로톡"**(제로 슈거 스파클링 음료)이 전 과정을 관통해 학습 몰입도를 높입니다.
 
 ---
 
@@ -40,9 +41,9 @@ brand_colors:
 | 트랙 | 순서 |
 |------|------|
 | 기획 / AE | C1 → C2 → C4 → C6 |
-| 크리에이티브 | C1 → C3 → C5 → C6 |
+| 크리에이티브 / 콘텐츠 | C1 → C3 → C5 → C7 → C6 |
 | 미디어 / 퍼포먼스 | C1 → C4 → C5 → C6 |
-| 풀코스(권장) | C1 → C2 → C3 → C4 → C5 → C6 |
+| 풀코스(권장) | C1 → C2 → C3 → C4 → C5 → C6 → C7 |
 
 ---
 
@@ -50,9 +51,9 @@ brand_colors:
 
 이 프로그램이 가르치는 하네스는 실제로 `.claude/` 에 구현되어 있습니다.
 
-- **공유 에이전트 풀** (`.claude/agents/`, 9종): 리서처 · 인사이트 에디터 · 카피라이터 · 아트디렉터 · 비주얼 디자이너 · 미디어 플래너 · 콘텐츠 크리에이터 · 문서 프로듀서 · QA 리뷰어
-- **방법 스킬** (`.claude/skills/`, 9종): 각 팀원의 "업무 매뉴얼"
-- **오케스트레이터 스킬** (6종): 과정별 "팀장" — `starter-harness` · `research-harness` · `creative-harness` · `media-harness` · `content-harness` · `automation-harness`
+- **공유 에이전트 풀** (`.claude/agents/`, 10종): 리서처 · 인사이트 에디터 · 카피라이터 · 아트디렉터 · 비주얼 디자이너 · 미디어 플래너 · 콘텐츠 크리에이터 · 문서 프로듀서 · QA 리뷰어 · **영상 감독**(video-director)
+- **방법 스킬** (`.claude/skills/`, 10종): 각 팀원의 "업무 매뉴얼" (Seedance 영상 매뉴얼 `seedance-video` 포함)
+- **오케스트레이터 스킬** (7종): 과정별 "팀장" — `starter-harness` · `research-harness` · `creative-harness` · `media-harness` · `content-harness` · `automation-harness` · `video-content-harness`
 - 트리거·변경 이력: [`CLAUDE.md`](CLAUDE.md) · 제작 규약: [`_ssot/conventions.md`](_ssot/conventions.md) · 상위 설계: [`spec/HARNESS_AD_ACADEMY_SPEC.md`](spec/HARNESS_AD_ACADEMY_SPEC.md)
 
 ## 과정 1 완성형 교보재 (강의 즉시 사용 가능)

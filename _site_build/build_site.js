@@ -10,12 +10,13 @@ marked.use({ gfm: true, breaks: false, mangle: false, headerIds: false });
 
 // ---------- course registry ----------
 const COURSES = [
-  { id: "c1", slug: "course1-basics",     book: "course1-basics/교재/C1_교재.md",     imgdir: "course1-basics/images",   caseFile: null },
-  { id: "c2", slug: "course2-research",   book: "course2-research/교재/C2_교재.md",   imgdir: "course2-research/images", caseFile: "course2-research/사례/C2_인사이트보고서.md" },
-  { id: "c3", slug: "course3-creative",   book: "course3-creative/교재/C3_교재.md",   imgdir: "course3-creative/images", caseFile: "course3-creative/사례/C3_크리에이티브패키지.md" },
-  { id: "c4", slug: "course4-media",      book: "course4-media/교재/C4_교재.md",      imgdir: "course4-media/images",    caseFile: "course4-media/사례/C4_미디어플랜.md" },
-  { id: "c5", slug: "course5-content",    book: "course5-content/교재/C5_교재.md",    imgdir: "course5-content/images",  caseFile: "course5-content/사례/C5_콘텐츠캘린더.md" },
-  { id: "c6", slug: "course6-automation", book: "course6-automation/교재/C6_교재.md", imgdir: "course6-automation/images", caseFile: "course6-automation/사례/C6_주간리포트_자동화.md" },
+  { id: "c1", slug: "course1-basics",     pat: "#3B82F6", book: "course1-basics/교재/C1_교재.md",     imgdir: "course1-basics/images",   caseFile: null },
+  { id: "c2", slug: "course2-research",   pat: "#8B5CF6", book: "course2-research/교재/C2_교재.md",   imgdir: "course2-research/images", caseFile: "course2-research/사례/C2_인사이트보고서.md" },
+  { id: "c3", slug: "course3-creative",   pat: "#FF6B4A", book: "course3-creative/교재/C3_교재.md",   imgdir: "course3-creative/images", caseFile: "course3-creative/사례/C3_크리에이티브패키지.md" },
+  { id: "c4", slug: "course4-media",      pat: "#F59E0B", book: "course4-media/교재/C4_교재.md",      imgdir: "course4-media/images",    caseFile: "course4-media/사례/C4_미디어플랜.md" },
+  { id: "c5", slug: "course5-content",    pat: "#3B82F6", book: "course5-content/교재/C5_교재.md",    imgdir: "course5-content/images",  caseFile: "course5-content/사례/C5_콘텐츠캘린더.md" },
+  { id: "c6", slug: "course6-automation", pat: "#EC4899", book: "course6-automation/교재/C6_교재.md", imgdir: "course6-automation/images", caseFile: "course6-automation/사례/C6_주간리포트_자동화.md" },
+  { id: "c7", slug: "course7-video",      pat: "#6366F1", book: "course7-video/교재/C7_교재.md",      imgdir: "course7-video/images",    caseFile: "course7-video/사례/C7_시드댄스_영상캠페인.md" },
 ];
 const bySlug = Object.fromEntries(COURSES.map(c => [c.slug, c]));
 const byId = Object.fromEntries(COURSES.map(c => [c.id, c]));
@@ -200,9 +201,9 @@ function landing() {
 
   const tracks = [
     ["기획 / AE", ["C1", "C2", "C4", "C6"]],
-    ["크리에이티브", ["C1", "C3", "C5", "C6"]],
+    ["크리에이티브 / 콘텐츠", ["C1", "C3", "C5", "C7", "C6"]],
     ["미디어 / 퍼포먼스", ["C1", "C4", "C5", "C6"]],
-    ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6"]],
+    ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6", "C7"]],
   ].map(([name, steps]) => `<div class="track"><h4>${name}</h4><div class="flow">${steps.map((s, i) => `${i ? '<span class="arr">→</span>' : ''}<a class="step" href="${s.toLowerCase()}.html">${s}</a>`).join("")}</div></div>`).join("");
 
   return HEAD("Harness Ad Academy — 광고 실무 × AI 하네스 교육")
@@ -216,12 +217,12 @@ function landing() {
           <a class="btn btn-ghost" href="#courses">전체 과정 보기</a>
         </div>
         <div class="stats">
-          <div><b>6</b><span>단계 과정 (기초→심화)</span></div>
+          <div><b>7</b><span>과정 (기초→심화+영상)</span></div>
           <div><b>6</b><span>협업 패턴 마스터</span></div>
           <div><b>100%</b><span>광고 실무 사례</span></div>
         </div>
       </div></section>`
-    + `<section class="section" id="courses"><h2 class="st">6개 과정</h2><p class="sub">기초부터 심화까지, 각 과정은 하나의 하네스 패턴과 실무 사례를 다룹니다. 가상 브랜드 “제로톡”이 전 과정을 관통합니다.</p><div class="cards">${cards}</div></section>`
+    + `<section class="section" id="courses"><h2 class="st">7개 과정</h2><p class="sub">기초부터 심화, 그리고 AI 영상까지. 각 과정은 하나의 하네스 패턴과 실무 사례를 다룹니다. 가상 브랜드 “제로톡”이 전 과정을 관통합니다.</p><div class="cards">${cards}</div></section>`
     + `<section class="section" id="tracks" style="padding-top:0"><h2 class="st">역할별 추천 트랙</h2><p class="sub">담당 업무에 맞는 순서로 골라 들으세요.</p><div class="tracks">${tracks}</div></section>`
     + `<section class="section" style="padding-top:0"><div class="track" style="background:linear-gradient(120deg,#0f1a30,#132540);color:#e8eef8;border:none">
         <h4 style="color:#fff;font-size:19px">지금 바로 실습해 보세요</h4>

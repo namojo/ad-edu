@@ -17,8 +17,10 @@
 | `media-harness` | 타겟·채널믹스·예산배분·A/B 미디어 플랜 | 감독자 |
 | `content-harness` | 트렌드→기획→대본→썸네일→SEO 콘텐츠 | 파이프라인 |
 | `automation-harness` | 반복 업무 자동화 + PPT/Word/Excel/PDF 문서 생성 | 계층위임+전문가풀 |
+| `video-content-harness` | 최신 Seedance로 숏폼·광고 영상(대본→스토리보드→샷 프롬프트→배포) | 파이프라인(영상) |
 
 **변경 이력:**
 | 날짜 | 변경 내용 | 대상 | 사유 |
 |------|----------|------|------|
 | 2026-07-15 | 초기 구성 (에이전트 9 + 방법스킬 9 + 오케스트레이터 6) | 전체 | 6과정 하네스 신규 구축 |
+| 2026-07-15 | C7 추가: video-director 에이전트 + seedance-video·video-content-harness 스킬 | agents/skills | Seedance 최신 버전 영상 콘텐츠 하네스 |
