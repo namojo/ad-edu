@@ -59,14 +59,14 @@ description: "채널별 성과를 진단하고 예산을 재배분해 월간 퍼
 
 ### Phase 5: 문서화·마무리
 1. (선택) KPI 시트(Excel)나 발표 문서가 필요하면 doc-producer를 호출해 재배분표·KPI를 xlsx/pptx로 산출한다(doc-automation). 필요 없으면 부르지 않는다.
-2. 최종 리포트를 지정 경로 `course7-performance/사례/C7_퍼포먼스_월간리포트.md`로 내보낸다.
+2. 최종 리포트를 지정 경로 `course5-performance/사례/C5_퍼포먼스_월간리포트.md`로 내보낸다.
 3. 팀 정리, `_workspace/` 보존.
 
 ## 데이터 전달
 
 - **팀 모드:** 태스크 + 파일 + 메시지. 통합 담당(insight-synthesizer)이 채널 카드 경로를 받아 Read로 수집한다.
 - **파일 규약:** `_workspace/{phase}_{agent}_{artifact}.{ext}`. 채널 구분을 위해 artifact 자리에 채널명을 쓴다(search/social/commerce).
-- **최종 산출물만** `course7-performance/사례/…`로 내보낸다. Excel/PPT가 필요하면 doc-producer의 파일을 함께 회수한다.
+- **최종 산출물만** `course5-performance/사례/…`로 내보낸다. Excel/PPT가 필요하면 doc-producer의 파일을 함께 회수한다.
 
 ## 데이터 흐름(그림)
 
@@ -80,7 +80,7 @@ description: "채널별 성과를 진단하고 예산을 재배분해 월간 퍼
                                                         ▼
                           (선택) [doc-producer] KPI 시트(Excel)·발표 문서
                                                         ▼
-                          course7-performance/사례/C7_퍼포먼스_월간리포트.md
+                          course5-performance/사례/C5_퍼포먼스_월간리포트.md
 ```
 
 > **비결정성 안내:** 같은 데이터라도 매 실행마다 진단 표현이나 액션 우선순위가 조금씩 달라질 수 있습니다. 팀 구성과 리포트 뼈대(채널 카드 → 재배분 → 실험 백로그)가 위와 같으면 정상입니다.
@@ -108,7 +108,7 @@ description: "채널별 성과를 진단하고 예산을 재배분해 월간 퍼
 2. Phase 1에서 운영 채널 3개·목표 고정.
 3. Phase 3에서 performance-marketer 3명이 검색/소셜/커머스를 병렬 진단 → 채널 카드 3개 저장.
 4. Phase 4에서 insight-synthesizer가 통합·예산 재배분(합계 검산)·실험 백로그 도출.
-5. 최종 리포트 `course7-performance/사례/C7_퍼포먼스_월간리포트.md` 생성.
+5. 최종 리포트 `course5-performance/사례/C5_퍼포먼스_월간리포트.md` 생성.
 
 ### 에러 흐름
 1. Phase 3에서 커머스 마케터가 스마트스토어 정산 매출을 못 받아 ROAS 계산 불가.
@@ -123,7 +123,7 @@ description: "채널별 성과를 진단하고 예산을 재배분해 월간 퍼
 - [ ] 원인이 전부 "가설"로 표시됐는가
 - [ ] 예산 재배분표의 합계·비중이 검산되었는가(합=총예산, 비중=100%)
 - [ ] A/B 실험 백로그의 변인이 각각 하나인가
-- [ ] 최종 리포트만 `course7-performance/사례/`로 내보냈는가
+- [ ] 최종 리포트만 `course5-performance/사례/`로 내보냈는가
 
 ## 실습 트리거 대표 프롬프트
 

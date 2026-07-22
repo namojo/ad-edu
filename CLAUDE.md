@@ -15,10 +15,10 @@
 | `automation-harness` | (C2) 반복 업무 자동화 + PPT/Word/Excel/PDF 문서 생성 | 계층위임+전문가풀 |
 | `research-harness` | (C3) 시장·소비자·경쟁·트렌드 병렬 조사 → 인사이트 | 팬아웃/팬인 |
 | `creative-harness` | (C4) 카피 A/B + 키비주얼 컨셉 + 아트디렉터 검수 | 생성-검증 |
-| `media-harness` | (C5) 타겟·채널믹스·예산배분·A/B 미디어 플랜 | 감독자 |
-| `content-harness` | (C6) 트렌드→기획→카피·캡션→썸네일→SEO 콘텐츠 | 파이프라인 |
-| `performance-harness` | (C7) 채널별 성과 진단·예산 재배분·퍼포먼스 리포트 | 전문가 풀 |
-| `scaleup-harness` | (C8) 제품 기획→상세페이지→유통→런칭 스케일업 | 계층적 위임 |
+| `performance-harness` | (C5) 채널별 성과 진단·예산 재배분·퍼포먼스 리포트 | 전문가 풀 |
+| `scaleup-harness` | (C6) 제품 기획→상세페이지→유통→런칭 스케일업 | 계층적 위임 |
+| `media-harness` | (C7) 타겟·채널믹스·예산배분·A/B 미디어 플랜 | 감독자 |
+| `content-harness` | (C8) 트렌드→기획→카피·캡션→썸네일→SEO 콘텐츠 | 파이프라인 |
 | `video-content-harness` | (E1·선택) Seedance 숏폼·광고 영상(대본→스토리보드→샷 프롬프트→배포) | 파이프라인(영상) |
 
 **변경 이력:**
@@ -28,3 +28,4 @@
 | 2026-07-15 | C7 추가: video-director 에이전트 + seedance-video·video-content-harness 스킬 | agents/skills | Seedance 최신 버전 영상 콘텐츠 하네스 |
 | 2026-07-22 | 커리큘럼 재편: 영상·시나리오(구 C7)를 선택 학습 E1로 이동, C6 카피·캡션 중심 개정 | 과정/스킬/웹 | 영상 제작은 실무 우선순위 낮음 → 선택 학습화 |
 | 2026-07-22 | C7 퍼포먼스 마케팅(performance-marketer + performance-marketing·performance-harness), C8 브랜드 스케일업·커머스(commerce-strategist + commerce-strategy·scaleup-harness) 신설 | agents/skills/과정 | 고객사(디렉터스컴퍼니) 사업 영역(퍼포먼스·브랜드 스케일업) 대응 콘텐츠 보강 |
+| 2026-07-22 | 과정 순서 재편: 퍼포먼스→C5, 스케일업→C6으로 앞당기고 미디어→C7, 콘텐츠→C8로 후순위 이동. 사이트 소제목 "광고·마케팅 실무 AI 팀 빌딩"으로 변경 | 과정/웹/스킬 경로 | 미디어·콘텐츠 제작은 실무 우선순위 낮음 → 후순위 배치 |

@@ -36,7 +36,7 @@ description: "반복 업무를 맞춤 하네스로 자동화하고 PPT/Word/Exce
    - **없음** → 초기 실행. Phase 1로.
    - **있음 + 정기 재실행**(예: "이번 주 데이터로 다시") → 새 주차 실행. 기존 `_workspace/`를 `_workspace_{YYYYMMDD}/`로 보관하고 새 데이터로 재실행하되, **하네스 구조(팀·문서 템플릿)는 재사용**한다.
    - **있음 + 부분 수정**(예: "액션 제안만 보완", "PPT만 다시") → 부분 재실행. 해당 태스크·해당 포맷만 다시 산출한다.
-3. **변경 이력**을 `course6-automation/사례/CHANGELOG.md`에 남긴다(재현·회귀 방지). 진화 요청 시 이 이력을 참조한다.
+3. **변경 이력**을 `course2-automation/사례/CHANGELOG.md`에 남긴다(재현·회귀 방지). 진화 요청 시 이 이력을 참조한다.
 
 ## Phase 흐름 (계층적 위임 → 전문가 배정 → 문서 패키지)
 
@@ -69,7 +69,7 @@ description: "반복 업무를 맞춤 하네스로 자동화하고 PPT/Word/Exce
 
 ### Phase 5: 검수·마무리
 1. qa-reviewer를 서브 에이전트로 호출해 수치 일관성·논리를 검수(quality-review) → 문제 시 해당 단계 1회 재생성.
-2. 최종 패키지를 지정 경로 `course6-automation/사례/주간리포트_패키지/`(4개 문서)로 내보낸다.
+2. 최종 패키지를 지정 경로 `course2-automation/사례/주간리포트_패키지/`(4개 문서)로 내보낸다.
 3. 변경 이력을 `CHANGELOG.md`에 기록하고, **매주 재실행 가능한 재사용 템플릿**으로 정리한다.
 4. `_workspace/` 보존.
 
@@ -78,7 +78,7 @@ description: "반복 업무를 맞춤 하네스로 자동화하고 PPT/Word/Exce
 - **팀 모드(Phase 3):** 태스크 + 파일 + 메시지. 하위 태스크는 상위 태스크에 `depends_on`으로 연결.
 - **서브 모드(Phase 4~5):** Agent 도구로 doc-producer/qa-reviewer 호출, 입력은 `_workspace/` 파일 경로로 전달, 산출도 파일로 회수.
 - **파일 규약:** `_workspace/{phase}_{agent}_{artifact}.{ext}`.
-- **최종 산출물만** `course6-automation/사례/주간리포트_패키지/`로 내보낸다.
+- **최종 산출물만** `course2-automation/사례/주간리포트_패키지/`로 내보낸다.
 - **모드 전환 규칙:** 팀 → 서브 전환 시 반드시 `TeamDelete` 후 Agent 호출. 서브의 파일 산출물을 이후 단계에 경로로 전달.
 
 ## 에러 핸들링
@@ -103,7 +103,7 @@ description: "반복 업무를 맞춤 하네스로 자동화하고 PPT/Word/Exce
 2. Phase 1에서 데이터요약/인사이트/액션/문서화로 분해, 전문가 선택.
 3. Phase 3 팀 모드로 데이터→인사이트→액션 산출.
 4. TeamDelete 후 Phase 4 서브 모드로 doc-producer가 PPT/Word/Excel/PDF 4종 생성.
-5. qa-reviewer 검수 통과 → `course6-automation/사례/주간리포트_패키지/` 내보냄, CHANGELOG 기록.
+5. qa-reviewer 검수 통과 → `course2-automation/사례/주간리포트_패키지/` 내보냄, CHANGELOG 기록.
 6. "다음 주 데이터로 다시" 재요청 시 하네스·템플릿 재사용해 재실행.
 
 ### 에러 흐름

@@ -50,14 +50,14 @@ description: "트렌드→기획→게시물 카피·캡션→썸네일→SEO를
 
 ### Phase 4: 마무리 — 캘린더 통합
 1. 4단계 산출물을 모아 **1주 콘텐츠 캘린더**(요일 × 콘텐츠 × 카피·캡션 × 썸네일 × 해시태그)로 정리.
-2. 최종 산출물을 지정 경로로 내보낸다: 캘린더 `course5-content/사례/C5_제로톡_1주캘린더.md`, 썸네일 `course5-content/images/`.
+2. 최종 산출물을 지정 경로로 내보낸다: 캘린더 `course8-content/사례/C8_제로톡_1주캘린더.md`, 썸네일 `course8-content/images/`.
 3. 팀 정리, `_workspace/` 보존.
 
 ## 데이터 전달
 
 - **팀 모드:** 태스크 + 파일 + 메시지. 각 단계는 **직전 단계의 산출물 파일 경로**를 받아 Read로 시작한다(파이프라인 전달의 핵심).
 - **파일 규약:** `_workspace/{phase}_{agent}_{artifact}.{ext}`. 썸네일은 폴더에 유일 파일명으로.
-- **최종 산출물만** `course5-content/{사례,images}/`로 내보낸다.
+- **최종 산출물만** `course8-content/{사례,images}/`로 내보낸다.
 
 ## 데이터 흐름(그림)
 
@@ -72,7 +72,7 @@ description: "트렌드→기획→게시물 카피·캡션→썸네일→SEO를
    ▼ Read(카피·캡션)
 [content-creator SEO] ─▶ 4_content_seo.md
    ▼ 팀장이 통합
-course5-content/{사례,images}/ (1주 캘린더 + 썸네일)
+course8-content/{사례,images}/ (1주 캘린더 + 썸네일)
 ```
 
 > **비결정성 안내:** 파이프라인은 앞 단계 결과가 조금만 바뀌어도 뒤 단계가 달라집니다. 그래서 상류(카피·캡션)를 고치면 하류(썸네일·SEO)를 함께 갱신합니다.
@@ -98,7 +98,7 @@ course5-content/{사례,images}/ (1주 캘린더 + 썸네일)
 ### 정상 흐름
 1. 사용자가 "제로톡" 1주 SNS 콘텐츠(숏폼/인스타/블로그)를 요청.
 2. researcher가 트렌드 조사 → content-creator가 5개 기획·카피·캡션 → visual-designer가 썸네일 5안 → content-creator가 해시태그 SEO.
-3. 1주 콘텐츠 캘린더로 통합, `course5-content/사례/C5_제로톡_1주캘린더.md` + 썸네일 내보냄.
+3. 1주 콘텐츠 캘린더로 통합, `course8-content/사례/C8_제로톡_1주캘린더.md` + 썸네일 내보냄.
 
 ### 에러 흐름
 1. Phase 3-3에서 썸네일 1장이 손상 생성.
@@ -112,7 +112,7 @@ course5-content/{사례,images}/ (1주 캘린더 + 썸네일)
 - [ ] 콘텐츠가 플랫폼별로 최적화됐는가(동일 포맷 남발 아님)
 - [ ] 썸네일에 텍스트를 넣지 않았고 손상 파일을 걸러냈는가
 - [ ] 제목·해시태그 SEO가 카피·캡션 기반으로 마무리됐는가
-- [ ] 1주 캘린더와 썸네일만 `course5-content/{사례,images}/`로 내보냈는가
+- [ ] 1주 캘린더와 썸네일만 `course8-content/{사례,images}/`로 내보냈는가
 
 ## 실습 트리거 대표 프롬프트
 

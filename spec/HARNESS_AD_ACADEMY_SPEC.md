@@ -1,10 +1,11 @@
 <project_specification>
 
 <!-- 2026-07-22 커리큘럼 재편 (현행 구조는 _ssot/conventions.md 와 CLAUDE.md 가 SSOT):
-     - 영상·시나리오(대본) 제작(구 C7 Seedance)은 실무 우선순위 낮음 → 선택 학습 E1(elective1-video)로 이동
-     - C6 콘텐츠·SNS는 영상 대본 대신 게시물 카피·캡션 중심으로 개정
-     - 신규 C7 퍼포먼스 마케팅 하네스(전문가 풀, course7-performance) 및
-       신규 C8 브랜드 스케일업·커머스 하네스(계층적 위임, course8-scaleup) 추가
+     - 영상·시나리오(대본) 제작(구 Seedance 영상 과정)은 실무 우선순위 낮음 → 선택 학습 E1(elective1-video)로 이동
+     - 콘텐츠·SNS 과정은 영상 대본 대신 게시물 카피·캡션 중심으로 개정
+     - 신규 퍼포먼스 마케팅 하네스(전문가 풀)와 브랜드 스케일업·커머스 하네스(계층적 위임) 추가
+     - 순서 재편: 퍼포먼스=C5(course5-performance), 스케일업=C6(course6-scaleup)으로 앞당기고,
+       미디어=C7(course7-media), 콘텐츠=C8(course8-content)은 후순위 배치
      본 스펙의 과정 번호/구성은 초기 설계 시점 기준의 히스토리로 보존한다. -->
 
 <project_name>Harness Ad Academy — 광고 실무자를 위한 harness 활용 교육과정 (기초→심화 8과정 + 선택 학습)</project_name>

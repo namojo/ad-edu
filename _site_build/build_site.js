@@ -20,10 +20,10 @@ const COURSES = [
   { id: "c2", slug: "course2-automation", pat: "#EC4899", book: "course2-automation/교재/C2_교재.md",     imgdir: "course2-automation/images", caseFile: "course2-automation/사례/C2_주간리포트_자동화.md" },
   { id: "c3", slug: "course3-research",   pat: "#8B5CF6", book: "course3-research/교재/C3_교재.md",       imgdir: "course3-research/images",   caseFile: "course3-research/사례/C3_인사이트보고서.md" },
   { id: "c4", slug: "course4-creative",   pat: "#FF6B4A", book: "course4-creative/교재/C4_교재.md",       imgdir: "course4-creative/images",   caseFile: "course4-creative/사례/C4_크리에이티브패키지.md" },
-  { id: "c5", slug: "course5-media",      pat: "#F59E0B", book: "course5-media/교재/C5_교재.md",          imgdir: "course5-media/images",      caseFile: "course5-media/사례/C5_미디어플랜.md" },
-  { id: "c6", slug: "course6-content",    pat: "#3B82F6", book: "course6-content/교재/C6_교재.md",        imgdir: "course6-content/images",    caseFile: "course6-content/사례/C6_콘텐츠캘린더.md" },
-  { id: "c7", slug: "course7-performance", pat: "#14B8A6", book: "course7-performance/교재/C7_교재.md",   imgdir: "course7-performance/images", caseFile: "course7-performance/사례/C7_퍼포먼스_월간리포트.md" },
-  { id: "c8", slug: "course8-scaleup",    pat: "#EC4899", book: "course8-scaleup/교재/C8_교재.md",        imgdir: "course8-scaleup/images",    caseFile: "course8-scaleup/사례/C8_스케일업_런칭플랜.md" },
+  { id: "c5", slug: "course5-performance", pat: "#14B8A6", book: "course5-performance/교재/C5_교재.md",   imgdir: "course5-performance/images", caseFile: "course5-performance/사례/C5_퍼포먼스_월간리포트.md" },
+  { id: "c6", slug: "course6-scaleup",    pat: "#EC4899", book: "course6-scaleup/교재/C6_교재.md",        imgdir: "course6-scaleup/images",    caseFile: "course6-scaleup/사례/C6_스케일업_런칭플랜.md" },
+  { id: "c7", slug: "course7-media",      pat: "#F59E0B", book: "course7-media/교재/C7_교재.md",          imgdir: "course7-media/images",      caseFile: "course7-media/사례/C7_미디어플랜.md" },
+  { id: "c8", slug: "course8-content",    pat: "#3B82F6", book: "course8-content/교재/C8_교재.md",        imgdir: "course8-content/images",    caseFile: "course8-content/사례/C8_콘텐츠캘린더.md" },
 ];
 // 선택 학습(elective) — 핵심 트랙과 분리 표기, 페이지는 동일 파이프라인으로 생성
 const ELECTIVES = [
@@ -107,14 +107,14 @@ function parseNav(md) {
 const HEAD = (title, extra = "") => `<!doctype html><html lang="ko" data-theme="light"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${title}</title>
-<meta name="description" content="광고 실무자를 위한 harness 활용 교육 · Harness Ad Academy">
+<meta name="description" content="광고·마케팅 실무자를 위한 AI 팀 빌딩(harness) 교육 · Harness Ad Academy">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
 <link rel="stylesheet" href="assets/style.css?v=${ASSET_VER}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF6B4A'/%3E%3Ctext x='16' y='23' font-size='19' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E">
 ${extra}</head><body>`;
 
 const HEADER = (rel = "") => `<header class="hdr"><div class="hdr-in">
-<a class="brand" href="${rel}index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고 실무 × AI 하네스</small></span></a>
+<a class="brand" href="${rel}index.html"><span class="logo"></span><span>Harness Ad Academy<small>광고·마케팅 실무 AI 팀 빌딩</small></span></a>
 <nav class="nav">
 <a class="hideSm" href="${rel}index.html#courses">과정</a>
 <a class="hideSm" href="${rel}index.html#tracks">추천 트랙</a>
@@ -123,7 +123,7 @@ const HEADER = (rel = "") => `<header class="hdr"><div class="hdr-in">
 </nav></div></header>`;
 
 const FOOT = () => `<footer class="foot"><div class="wrap">
-<span>Harness Ad Academy · 광고 실무자를 위한 <code>harness</code> 활용 교육</span>
+<span>Harness Ad Academy · 광고·마케팅 실무자를 위한 AI 팀 빌딩(<code>harness</code>) 교육</span>
 <span>© 2026 · 8개 핵심 과정 + 선택 학습 · 비개발자용 실습 중심</span>
 </div></footer><script src="assets/app.js?v=${ASSET_VER}"></script></body></html>`;
 
@@ -226,14 +226,14 @@ function landing() {
   const electiveCards = ELECTIVES.map(cardOf).join("");
 
   const tracks = [
-    ["기획 / AE", ["C1", "C2", "C3", "C5", "C8"]],
-    ["크리에이티브 / 콘텐츠", ["C1", "C2", "C4", "C6"]],
+    ["기획 / AE", ["C1", "C2", "C3", "C6", "C7"]],
+    ["크리에이티브 / 콘텐츠", ["C1", "C2", "C4", "C8"]],
     ["미디어 / 퍼포먼스", ["C1", "C2", "C5", "C7"]],
-    ["커머스 / 브랜드 성장", ["C1", "C3", "C7", "C8"]],
+    ["커머스 / 브랜드 성장", ["C1", "C3", "C5", "C6"]],
     ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]],
   ].map(([name, steps]) => `<div class="track"><h4>${name}</h4><div class="flow">${steps.map((s, i) => `${i ? '<span class="arr">→</span>' : ''}<a class="step" href="${s.toLowerCase()}.html">${s}</a>`).join("")}</div></div>`).join("");
 
-  return HEAD("Harness Ad Academy — 광고 실무 × AI 하네스 교육")
+  return HEAD("Harness Ad Academy — 광고·마케팅 실무 AI 팀 빌딩 교육")
     + HEADER()
     + `<section class="hero"><div class="wrap">
         <p class="eyebrow">HARNESS AD ACADEMY</p>

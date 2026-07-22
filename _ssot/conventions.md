@@ -60,10 +60,10 @@
 | automation-harness | C2 | 계층적 위임+전문가풀 | 상황별 풀 + doc-producer(문서 자동화) |
 | research-harness | C3 | 팬아웃/팬인 | researcher×4(병렬) → insight-synthesizer |
 | creative-harness | C4 | 생성-검증 | copywriter + visual-designer → art-director(검수) |
-| media-harness | C5 | 감독자 | media-planner(감독) + researcher + doc-producer |
-| content-harness | C6 | 파이프라인 | researcher → content-creator(카피·캡션) → visual-designer → (SEO) |
-| performance-harness | C7 | 전문가 풀 | performance-marketer(채널별 선택 호출) → insight-synthesizer → doc-producer |
-| scaleup-harness | C8 | 계층적 위임 | commerce-strategist(총괄) → researcher/copywriter/media-planner/doc-producer |
+| performance-harness | C5 | 전문가 풀 | performance-marketer(채널별 선택 호출) → insight-synthesizer → doc-producer |
+| scaleup-harness | C6 | 계층적 위임 | commerce-strategist(총괄) → researcher/copywriter/media-planner/doc-producer |
+| media-harness | C7 | 감독자 | media-planner(감독) + researcher + doc-producer |
+| content-harness | C8 | 파이프라인 | researcher → content-creator(카피·캡션) → visual-designer → (SEO) |
 | video-content-harness | E1(선택) | 파이프라인(영상) | content-creator → video-director(Seedance) |
 
 - 스킬 frontmatter 필수: `name`, `description`(적극적/pushy, 후속 키워드 "다시/재실행/수정/보완" 포함).
@@ -71,9 +71,9 @@
 - 방법 스킬은 500줄 이내, 명령형, Why 설명. 필요시 references/ 분리.
 
 ## 4. 문서 생성 스킬 연계
-- 이미지: **codex-image**(병렬 최대 5장, 텍스트 배제) — visual-concepting이 사용. C3 키비주얼·C5 썸네일.
-- 문서: **pptx/docx/xlsx/pdf** — doc-automation이 사용. C4 Excel·C6 보고서 패키지.
-- 리서치 심화: **deep-research** — C2 연계.
+- 이미지: **codex-image**(병렬 최대 5장, 텍스트 배제) — visual-concepting이 사용. C4 키비주얼·C8 썸네일.
+- 문서: **pptx/docx/xlsx/pdf** — doc-automation이 사용. C2 보고서 패키지·C5 KPI 시트·C7 미디어플랜 Excel.
+- 리서치 심화: **deep-research** — C3 연계.
 
 ## 5. 디자인 시스템 (교재/이미지 공통)
 - 색: Ink Navy `#1E293B`, Signal Coral `#FF6B4A`, Fresh Teal `#2DD4BF`, Slate `#64748B`, Paper `#F8FAFC`.
@@ -128,25 +128,25 @@ hero_image: ../images/... (있으면)
 - "실제로 하네스를 돌렸을 때 나올 법한" 현실적 산출물을 직접 집필한다(가상 브랜드 사용).
 - 가상 브랜드/데이터는 명확히 예시임을 표기. 수치는 그럴듯하되 "예시 데이터" 라벨.
 - 큰 산출물(리서치 보고서, 미디어플랜, 콘텐츠 캘린더)은 `courseN/사례/`에 별도 md/표로 저장하고 교재 5장에서 링크+핵심 발췌.
-- 비주얼 사례(C3 키비주얼 4안, C5 썸네일)는 `courseN/images/`에 실제 생성 이미지, 교재에 삽입.
+- 비주얼 사례(C4 키비주얼 4안, C8 썸네일)는 `courseN/images/`에 실제 생성 이미지, 교재에 삽입.
 
 ## 8. 가상 브랜드/시나리오 (과정 간 일관 사용)
 - C1: 신제품 음료 **"제로톡"** (제로 슈거 스파클링) 런칭 — 미니 리서치+카피
 - C2: 대행사 **"주간 캠페인 성과 리포트"** 자동화 — 문서 패키지
 - C3: **"제로톡"** 카테고리(제로 슈거 음료) 진단 — 시장·소비자·경쟁·트렌드 병렬 조사
 - C4: **"제로톡"** 여름 캠페인 크리에이티브 — 카피 A/B + 키비주얼 4안
-- C5: **"제로톡"** 런칭 캠페인 미디어 플랜 — 예산 5,000만원
-- C6: **"제로톡"** 1주 SNS 콘텐츠 — 숏폼/인스타/블로그 (카피·캡션 중심)
-- C7: **"제로톡"** 런칭 4주차 채널 성과 진단 — 검색·소셜·커머스 채널, 월간 리포트 + 예산 재배분
-- C8: **"제로톡"** D2C 스케일업 — 라인 확장 기획·상세페이지·유통 채널·4주 런칭 캘린더
+- C5: **"제로톡"** 런칭 4주차 채널 성과 진단 — 검색·소셜·커머스 채널, 월간 리포트 + 예산 재배분
+- C6: **"제로톡"** D2C 스케일업 — 라인 확장 기획·상세페이지·유통 채널·4주 런칭 캘린더
+- C7: **"제로톡"** 런칭 캠페인 미디어 플랜 — 예산 5,000만원
+- C8: **"제로톡"** 1주 SNS 콘텐츠 — 숏폼/인스타/블로그 (카피·캡션 중심)
 - E1(선택): **"제로톡"** 숏폼 광고 영상 — 대본→스토리보드→Seedance 샷 생성
 > 하나의 브랜드("제로톡")가 전 과정을 관통하면 학습 몰입도↑. C2만 대행사 내부 업무.
 
 ## 9. 파일 경로 규약
 ```
 harness-ad-academy/
-├── .claude/agents/*.md              # 에이전트 풀 9
-├── .claude/skills/<skill>/SKILL.md  # 방법9 + 오케스트레이터6
+├── .claude/agents/*.md              # 에이전트 풀 12
+├── .claude/skills/<skill>/SKILL.md  # 방법12 + 오케스트레이터9
 ├── CLAUDE.md                        # 하네스 포인터 + 변경이력
 ├── _ssot/conventions.md             # 본 문서
 ├── spec/HARNESS_AD_ACADEMY_SPEC.md
@@ -154,10 +154,10 @@ harness-ad-academy/
 ├── course2-automation/{교재,사례}/
 ├── course3-research/{교재,사례}/
 ├── course4-creative/{교재,사례,images}/
-├── course5-media/{교재,사례}/
-├── course6-content/{교재,사례,images}/
-├── course7-performance/{교재,사례}/
-├── course8-scaleup/{교재,사례}/
+├── course5-performance/{교재,사례}/
+├── course6-scaleup/{교재,사례}/
+├── course7-media/{교재,사례}/
+├── course8-content/{교재,사례,images}/
 └── elective1-video/{교재,사례,images}/   # 선택 학습 E1
 ```
 
