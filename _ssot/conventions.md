@@ -7,9 +7,10 @@
 
 ## 1. 프로젝트 목적
 
-광고 회사 **비개발자 실무자**가 Claude Code용 플러그인 `harness`로 실무를 자동화하도록 가르치는 6단계 교육 프로그램.
+광고 회사 **비개발자 실무자**가 Claude Code용 플러그인 `harness`로 실무를 자동화하도록 가르치는 **8개 핵심 과정 + 선택 학습(E1)** 교육 프로그램.
 - 하네스 = "하네스 구성해줘" 한 문장으로 업무를 **AI 에이전트 팀 + 스킬**로 변환하는 팀 아키텍처 팩토리.
-- 우리는 이 프로그램이 가르치는 **6개 도메인 하네스**를 직접 구축하고, 각 과정의 **완성형 사례**와 **웹 대응 md 교재**를 만든다.
+- 우리는 이 프로그램이 가르치는 **도메인 하네스들**을 직접 구축하고, 각 과정의 **완성형 사례**와 **웹 대응 md 교재**를 만든다.
+- 영상·시나리오(대본) 제작은 실무 우선순위가 낮아 **선택 학습(E1)** 으로 분리한다. 핵심 과정에서는 다루지 않고, 필요한 실무자만 E1에서 학습한다.
 
 ## 2. 대상 독자 = 비개발자 (톤 규칙, 필수)
 
@@ -29,9 +30,9 @@
 
 ## 3. 아키텍처 결정 (확정)
 
-**공유 에이전트 풀 + 과정별 오케스트레이터.** 6과정이 아래 에이전트를 공유하고, 과정마다 오케스트레이터 스킬 1개가 이들을 엮는다.
+**공유 에이전트 풀 + 과정별 오케스트레이터.** 전 과정이 아래 에이전트를 공유하고, 과정마다 오케스트레이터 스킬 1개가 이들을 엮는다.
 
-### 에이전트 풀 (`.claude/agents/`) — 9종
+### 에이전트 풀 (`.claude/agents/`) — 12종
 | 파일 | 이름(역할) | 광고팀 비유 | 주 사용 스킬 |
 |---|---|---|---|
 | researcher.md | 리서처 | 조사 담당 | market-research |
@@ -41,23 +42,29 @@
 | visual-designer.md | 비주얼 디자이너 | 디자이너 | visual-concepting |
 | media-planner.md | 미디어 플래너 | 미디어 플래너 | media-planning |
 | content-creator.md | 콘텐츠 크리에이터 | 콘텐츠/SNS | content-production |
+| performance-marketer.md | 퍼포먼스 마케터 | 채널 운영·성과 분석 | performance-marketing |
+| commerce-strategist.md | 커머스 전략가 | 브랜드 스케일업 총괄 | commerce-strategy |
 | doc-producer.md | 문서 프로듀서 | 산출물 정리 | doc-automation |
 | qa-reviewer.md | QA 리뷰어 | 품질 검수 | quality-review |
+| video-director.md | 영상 감독 (선택 학습 E1 전용) | 영상 연출 | seedance-video |
 
 - 모든 에이전트 정의는 `model: opus` 전제(호출 시 명시). 빌트인 타입이라도 파일로 정의.
 - 에이전트 파일 필수 섹션: `## 핵심 역할`, `## 작업 원칙`, `## 입력/출력 프로토콜`, `## 에러 핸들링`, `## 팀 통신 프로토콜`, `## 재호출 지침`.
 
 ### 스킬 (`.claude/skills/`)
-**방법 스킬 9종** (각 에이전트의 "어떻게"): market-research, insight-synthesis, ad-copywriting, creative-direction, visual-concepting, media-planning, content-production, doc-automation, quality-review.
-**오케스트레이터 스킬 6종** (과정별 "누가 언제 협업"):
+**방법 스킬 12종** (각 에이전트의 "어떻게"): market-research, insight-synthesis, ad-copywriting, creative-direction, visual-concepting, media-planning, content-production, performance-marketing, commerce-strategy, doc-automation, quality-review, (선택) seedance-video.
+**오케스트레이터 스킬 9종** (과정별 "누가 언제 협업"):
 | 스킬 | 과정 | 패턴 | 팀 구성 |
 |---|---|---|---|
 | starter-harness | C1 | 파이프라인(소개) | researcher → copywriter |
-| research-harness | C2 | 팬아웃/팬인 | researcher×4(병렬) → insight-synthesizer |
-| creative-harness | C3 | 생성-검증 | copywriter + visual-designer → art-director(검수) |
-| media-harness | C4 | 감독자 | media-planner(감독) + researcher + doc-producer |
-| content-harness | C5 | 파이프라인 | researcher → content-creator → visual-designer → (SEO) |
-| automation-harness | C6 | 계층적 위임+전문가풀 | 상황별 풀 + doc-producer(문서 자동화) |
+| automation-harness | C2 | 계층적 위임+전문가풀 | 상황별 풀 + doc-producer(문서 자동화) |
+| research-harness | C3 | 팬아웃/팬인 | researcher×4(병렬) → insight-synthesizer |
+| creative-harness | C4 | 생성-검증 | copywriter + visual-designer → art-director(검수) |
+| media-harness | C5 | 감독자 | media-planner(감독) + researcher + doc-producer |
+| content-harness | C6 | 파이프라인 | researcher → content-creator(카피·캡션) → visual-designer → (SEO) |
+| performance-harness | C7 | 전문가 풀 | performance-marketer(채널별 선택 호출) → insight-synthesizer → doc-producer |
+| scaleup-harness | C8 | 계층적 위임 | commerce-strategist(총괄) → researcher/copywriter/media-planner/doc-producer |
+| video-content-harness | E1(선택) | 파이프라인(영상) | content-creator → video-director(Seedance) |
 
 - 스킬 frontmatter 필수: `name`, `description`(적극적/pushy, 후속 키워드 "다시/재실행/수정/보완" 포함).
 - 오케스트레이터 스킬 본문 필수: 실행 모드 명시, Phase 흐름, 데이터 전달, 에러 핸들링(1회 재시도→누락 명시, 상충은 출처 병기), `## 테스트 시나리오`(정상1+에러1), Phase 1 컨텍스트 확인(초기/후속/부분 재실행).
@@ -125,12 +132,15 @@ hero_image: ../images/... (있으면)
 
 ## 8. 가상 브랜드/시나리오 (과정 간 일관 사용)
 - C1: 신제품 음료 **"제로톡"** (제로 슈거 스파클링) 런칭 — 미니 리서치+카피
-- C2: **"제로톡"** 카테고리(제로 슈거 음료) 진단 — 시장·소비자·경쟁·트렌드 병렬 조사
-- C3: **"제로톡"** 여름 캠페인 크리에이티브 — 카피 A/B + 키비주얼 4안
-- C4: **"제로톡"** 런칭 캠페인 미디어 플랜 — 예산 5,000만원
-- C5: **"제로톡"** 1주 SNS 콘텐츠 — 숏폼/인스타/블로그
-- C6: 대행사 **"주간 캠페인 성과 리포트"** 자동화 — 문서 패키지
-> 하나의 브랜드("제로톡")가 6과정을 관통하면 학습 몰입도↑. C6만 대행사 내부 업무.
+- C2: 대행사 **"주간 캠페인 성과 리포트"** 자동화 — 문서 패키지
+- C3: **"제로톡"** 카테고리(제로 슈거 음료) 진단 — 시장·소비자·경쟁·트렌드 병렬 조사
+- C4: **"제로톡"** 여름 캠페인 크리에이티브 — 카피 A/B + 키비주얼 4안
+- C5: **"제로톡"** 런칭 캠페인 미디어 플랜 — 예산 5,000만원
+- C6: **"제로톡"** 1주 SNS 콘텐츠 — 숏폼/인스타/블로그 (카피·캡션 중심)
+- C7: **"제로톡"** 런칭 4주차 채널 성과 진단 — 검색·소셜·커머스 채널, 월간 리포트 + 예산 재배분
+- C8: **"제로톡"** D2C 스케일업 — 라인 확장 기획·상세페이지·유통 채널·4주 런칭 캘린더
+- E1(선택): **"제로톡"** 숏폼 광고 영상 — 대본→스토리보드→Seedance 샷 생성
+> 하나의 브랜드("제로톡")가 전 과정을 관통하면 학습 몰입도↑. C2만 대행사 내부 업무.
 
 ## 9. 파일 경로 규약
 ```
@@ -141,11 +151,14 @@ harness-ad-academy/
 ├── _ssot/conventions.md             # 본 문서
 ├── spec/HARNESS_AD_ACADEMY_SPEC.md
 ├── course1-basics/  (기존 deck/handout/worksheet) + 교재/C1_교재.md
-├── course2-research/{교재,사례}/
-├── course3-creative/{교재,사례,images}/
-├── course4-media/{교재,사례}/
-├── course5-content/{교재,사례,images}/
-└── course6-automation/{교재,사례}/
+├── course2-automation/{교재,사례}/
+├── course3-research/{교재,사례}/
+├── course4-creative/{교재,사례,images}/
+├── course5-media/{교재,사례}/
+├── course6-content/{교재,사례,images}/
+├── course7-performance/{교재,사례}/
+├── course8-scaleup/{교재,사례}/
+└── elective1-video/{교재,사례,images}/   # 선택 학습 E1
 ```
 
 ## 10. 품질 게이트(제작자 자가 점검)

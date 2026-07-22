@@ -22,10 +22,16 @@ const COURSES = [
   { id: "c4", slug: "course4-creative",   pat: "#FF6B4A", book: "course4-creative/교재/C4_교재.md",       imgdir: "course4-creative/images",   caseFile: "course4-creative/사례/C4_크리에이티브패키지.md" },
   { id: "c5", slug: "course5-media",      pat: "#F59E0B", book: "course5-media/교재/C5_교재.md",          imgdir: "course5-media/images",      caseFile: "course5-media/사례/C5_미디어플랜.md" },
   { id: "c6", slug: "course6-content",    pat: "#3B82F6", book: "course6-content/교재/C6_교재.md",        imgdir: "course6-content/images",    caseFile: "course6-content/사례/C6_콘텐츠캘린더.md" },
-  { id: "c7", slug: "course7-video",      pat: "#6366F1", book: "course7-video/교재/C7_교재.md",          imgdir: "course7-video/images",      caseFile: "course7-video/사례/C7_시드댄스_영상캠페인.md" },
+  { id: "c7", slug: "course7-performance", pat: "#14B8A6", book: "course7-performance/교재/C7_교재.md",   imgdir: "course7-performance/images", caseFile: "course7-performance/사례/C7_퍼포먼스_월간리포트.md" },
+  { id: "c8", slug: "course8-scaleup",    pat: "#EC4899", book: "course8-scaleup/교재/C8_교재.md",        imgdir: "course8-scaleup/images",    caseFile: "course8-scaleup/사례/C8_스케일업_런칭플랜.md" },
 ];
-const bySlug = Object.fromEntries(COURSES.map(c => [c.slug, c]));
-const byId = Object.fromEntries(COURSES.map(c => [c.id, c]));
+// 선택 학습(elective) — 핵심 트랙과 분리 표기, 페이지는 동일 파이프라인으로 생성
+const ELECTIVES = [
+  { id: "e1", slug: "elective1-video",    pat: "#6366F1", book: "elective1-video/교재/E1_교재.md",        imgdir: "elective1-video/images",    caseFile: "elective1-video/사례/E1_시드댄스_영상캠페인.md", elective: true },
+];
+const ALL = [...COURSES, ...ELECTIVES];
+const bySlug = Object.fromEntries(ALL.map(c => [c.slug, c]));
+const byId = Object.fromEntries(ALL.map(c => [c.id, c]));
 
 // ---------- helpers ----------
 function readFM(md) {
@@ -72,8 +78,18 @@ function process(html, ctx) {
     const cap = alt ? `<span class="imgcap">${alt}</span>` : "";
     return `<img src="assets/img/${ctx.slug}/${file}" alt="${alt || ""}" loading="lazy">${cap}`;
   });
-  // case links ../사례/*.md -> case page
-  html = html.replace(/<a href="\.\.\/사례\/[^"]+\.md"/g, `<a class="inline" href="${ctx.id}-case.html"`);
+  // internal .md links (marked가 한글 경로를 URL 인코딩하므로 decode 후 매칭)
+  //   ../사례/*.md   -> 현재 과정의 사례 페이지
+  //   ../교재/*.md   -> 현재 과정의 교재 페이지 (사례→교재 역링크)
+  //   ../../<slug>/교재/*.md -> 해당 과정 페이지 (과정 간 링크, 예: C6→E1)
+  html = html.replace(/<a href="((?:\.\.\/)+[^"]+\.md)"/g, (m, href) => {
+    let dec; try { dec = decodeURIComponent(href); } catch { dec = href; }
+    if (/^\.\.\/사례\//.test(dec)) return `<a class="inline" href="${ctx.id}-case.html"`;
+    if (/^\.\.\/교재\//.test(dec)) return `<a class="inline" href="${ctx.id}.html"`;
+    const mm = dec.match(/^\.\.\/\.\.\/([\w-]+)\/교재\//);
+    if (mm && bySlug[mm[1]]) return `<a class="inline" href="${bySlug[mm[1]].id}.html"`;
+    return m;
+  });
   // external / other links get inline class
   html = html.replace(/<a href="(https?:[^"]+)"/g, '<a class="inline" target="_blank" rel="noopener" href="$1"');
   // strip web nav comment
@@ -108,14 +124,18 @@ const HEADER = (rel = "") => `<header class="hdr"><div class="hdr-in">
 
 const FOOT = () => `<footer class="foot"><div class="wrap">
 <span>Harness Ad Academy · 광고 실무자를 위한 <code>harness</code> 활용 교육</span>
-<span>© 2026 · 6개 과정 · 비개발자용 실습 중심</span>
+<span>© 2026 · 8개 핵심 과정 + 선택 학습 · 비개발자용 실습 중심</span>
 </div></footer><script src="assets/app.js?v=${ASSET_VER}"></script></body></html>`;
 
 const courseSidebar = (curId, toc) => `
 <aside class="side" id="side">
-  <h5>전체 과정</h5>
+  <h5>핵심 과정</h5>
   <ul class="courselist">
     ${COURSES.map(c => `<li><a class="${c.id === curId ? "cur" : ""}" style="--cdot:${c.pat}" href="${c.id}.html"><span class="dot"></span>${c.id.toUpperCase()} · ${c.title}</a></li>`).join("")}
+  </ul>
+  <h5>선택 학습</h5>
+  <ul class="courselist">
+    ${ELECTIVES.map(c => `<li><a class="${c.id === curId ? "cur" : ""}" style="--cdot:${c.pat}" href="${c.id}.html"><span class="dot"></span>${c.id.toUpperCase()} · ${c.title}</a></li>`).join("")}
   </ul>
   <h5>이 과정 목차</h5>
   <nav class="toc">
@@ -185,7 +205,7 @@ function casePage(c) {
 }
 
 function landing() {
-  const cards = COURSES.map(c => {
+  const cardOf = c => {
     const fm = c._fm || {};
     const pat = fm.pattern_color || c.pat;
     const hook = (() => {
@@ -201,13 +221,16 @@ function landing() {
       <div class="meta"><span class="chip pat">${fm.pattern || ""}</span><span class="chip">${fm.level || ""}</span><span class="chip">${fm.duration_min || ""}분</span></div>
       <span class="go">과정 열기 →</span>
     </a>`;
-  }).join("");
+  };
+  const cards = COURSES.map(cardOf).join("");
+  const electiveCards = ELECTIVES.map(cardOf).join("");
 
   const tracks = [
-    ["기획 / AE", ["C1", "C2", "C3", "C5"]],
-    ["크리에이티브 / 콘텐츠", ["C1", "C2", "C4", "C6", "C7"]],
-    ["미디어 / 퍼포먼스", ["C1", "C2", "C5", "C6"]],
-    ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6", "C7"]],
+    ["기획 / AE", ["C1", "C2", "C3", "C5", "C8"]],
+    ["크리에이티브 / 콘텐츠", ["C1", "C2", "C4", "C6"]],
+    ["미디어 / 퍼포먼스", ["C1", "C2", "C5", "C7"]],
+    ["커머스 / 브랜드 성장", ["C1", "C3", "C7", "C8"]],
+    ["풀코스 (권장)", ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]],
   ].map(([name, steps]) => `<div class="track"><h4>${name}</h4><div class="flow">${steps.map((s, i) => `${i ? '<span class="arr">→</span>' : ''}<a class="step" href="${s.toLowerCase()}.html">${s}</a>`).join("")}</div></div>`).join("");
 
   return HEAD("Harness Ad Academy — 광고 실무 × AI 하네스 교육")
@@ -215,18 +238,19 @@ function landing() {
     + `<section class="hero"><div class="wrap">
         <p class="eyebrow">HARNESS AD ACADEMY</p>
         <h1>한 문장으로,<br><span class="hl">나만의 AI 팀</span>을 만든다</h1>
-        <p>코딩 지식 없이 광고 실무 — 리서치·크리에이티브·미디어·콘텐츠·자동화 — 를 AI 에이전트 팀으로 처리하는 6단계 실습 교육.</p>
+        <p>코딩 지식 없이 광고 실무 — 리서치·크리에이티브·미디어·콘텐츠·퍼포먼스·커머스·자동화 — 를 AI 에이전트 팀으로 처리하는 8개 핵심 과정 실습 교육.</p>
         <div class="cta">
           <a class="btn btn-primary" href="c1.html">C1부터 시작하기 →</a>
           <a class="btn btn-ghost" href="#courses">전체 과정 보기</a>
         </div>
         <div class="stats">
-          <div><b>7</b><span>과정 (기초→심화+영상)</span></div>
+          <div><b>8</b><span>핵심 과정 (기초→심화)</span></div>
           <div><b>6</b><span>협업 패턴 마스터</span></div>
           <div><b>100%</b><span>광고 실무 사례</span></div>
         </div>
       </div></section>`
-    + `<section class="section" id="courses"><h2 class="st">7개 과정</h2><p class="sub">기초부터 심화, 그리고 AI 영상까지. 각 과정은 하나의 하네스 패턴과 실무 사례를 다룹니다. 가상 브랜드 “제로톡”이 전 과정을 관통합니다.</p><div class="cards">${cards}</div></section>`
+    + `<section class="section" id="courses"><h2 class="st">8개 핵심 과정</h2><p class="sub">기초부터 심화까지, 각 과정은 하나의 하네스 패턴과 실무 사례를 다룹니다. 가상 브랜드 “제로톡”이 전 과정을 관통합니다.</p><div class="cards">${cards}</div></section>`
+    + `<section class="section" id="electives" style="padding-top:0"><h2 class="st">선택 학습</h2><p class="sub">영상·시나리오(대본) 제작이 실제 업무인 실무자를 위한 선택 과정입니다. 핵심 과정을 마친 뒤 필요할 때 수강하세요.</p><div class="cards">${electiveCards}</div></section>`
     + `<section class="section" id="tracks" style="padding-top:0"><h2 class="st">역할별 추천 트랙</h2><p class="sub">담당 업무에 맞는 순서로 골라 들으세요.</p><div class="tracks">${tracks}</div></section>`
     + `<section class="section" style="padding-top:0"><div class="track" style="background:linear-gradient(120deg,#0f1a30,#132540);color:#e8eef8;border:none">
         <h4 style="color:#fff;font-size:19px">지금 바로 실습해 보세요</h4>
@@ -241,7 +265,7 @@ function rimraf(p){ if(fs.existsSync(p)) fs.rmSync(p,{recursive:true,force:true}
 function copyDir(src,dst){ fs.mkdirSync(dst,{recursive:true}); for(const f of fs.readdirSync(src)){ const s=path.join(src,f),d=path.join(dst,f); if(fs.statSync(s).isDirectory()) copyDir(s,d); else fs.copyFileSync(s,d); } }
 
 // pre-pass: load all frontmatter/titles so sidebars & pagers resolve for every course
-for (const c of COURSES) {
+for (const c of ALL) {
   const raw = fs.readFileSync(path.join(ROOT, c.book), "utf-8");
   const { fm } = readFM(raw);
   c._fm = fm; c.title = fm.title || c.id.toUpperCase();
@@ -251,7 +275,7 @@ rimraf(OUT); fs.mkdirSync(OUT, { recursive: true });
 // assets
 copyDir(ASSET_SRC, path.join(OUT, "assets"));
 // images per course
-for (const c of COURSES) {
+for (const c of ALL) {
   const src = path.join(ROOT, c.imgdir);
   if (fs.existsSync(src)) {
     const dst = path.join(OUT, "assets", "img", c.slug);
@@ -260,9 +284,9 @@ for (const c of COURSES) {
   }
 }
 // course pages first (populate _fm)
-for (const c of COURSES) fs.writeFileSync(path.join(OUT, `${c.id}.html`), coursePage(c));
+for (const c of ALL) fs.writeFileSync(path.join(OUT, `${c.id}.html`), coursePage(c));
 // case pages
-for (const c of COURSES) { const p = casePage(c); if (p) fs.writeFileSync(path.join(OUT, `${c.id}-case.html`), p); }
+for (const c of ALL) { const p = casePage(c); if (p) fs.writeFileSync(path.join(OUT, `${c.id}-case.html`), p); }
 // landing (needs _fm populated)
 fs.writeFileSync(path.join(OUT, "index.html"), landing());
 // .nojekyll so GitHub Pages serves _ files / doesn't run jekyll

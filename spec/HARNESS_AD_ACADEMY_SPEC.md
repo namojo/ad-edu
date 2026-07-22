@@ -1,6 +1,13 @@
 <project_specification>
 
-<project_name>Harness Ad Academy — 광고 실무자를 위한 harness 활용 교육과정 (기초→심화 6과정)</project_name>
+<!-- 2026-07-22 커리큘럼 재편 (현행 구조는 _ssot/conventions.md 와 CLAUDE.md 가 SSOT):
+     - 영상·시나리오(대본) 제작(구 C7 Seedance)은 실무 우선순위 낮음 → 선택 학습 E1(elective1-video)로 이동
+     - C6 콘텐츠·SNS는 영상 대본 대신 게시물 카피·캡션 중심으로 개정
+     - 신규 C7 퍼포먼스 마케팅 하네스(전문가 풀, course7-performance) 및
+       신규 C8 브랜드 스케일업·커머스 하네스(계층적 위임, course8-scaleup) 추가
+     본 스펙의 과정 번호/구성은 초기 설계 시점 기준의 히스토리로 보존한다. -->
+
+<project_name>Harness Ad Academy — 광고 실무자를 위한 harness 활용 교육과정 (기초→심화 8과정 + 선택 학습)</project_name>
 
 <overview>
 Harness Ad Academy는 광고 회사의 **비개발자 실무자**(기획/AE, 크리에이티브, 미디어 플래너, 콘텐츠/퍼포먼스 마케터)가 Claude Code용 플러그인 **`harness`**를 자신의 업무에 직접 적용할 수 있도록 설계된 6단계 교육과정이다. harness는 "하네스 구성해줘" 한 문장으로 도메인 설명을 **전문 에이전트 팀 + 스킬**로 변환해 주는 "팀 아키텍처 팩토리"이며, 본 과정은 이 도구를 코드 지식 없이 실무 산출물(리서치 보고서, 크리에이티브, 미디어 플랜, 콘텐츠, 자동화 문서)로 연결하는 것을 목표로 한다.
